@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box1">盒子1</div>
+<div id="box2">盒子2</div>
+<div id="box3">盒子3</div>
+</body>
+<script>
+    var box2Obj = document.getElementById("box2");
+    var box3Obj = document.getElementById("box3");
+    // 获取指定节点的上一个兄弟节点
+    // var previousObj = box3Obj.previousElementSibling;
+    // 盒子2
+    // alert(previousObj.innerHTML);
+    var sibling = box3Obj.previousSibling;      // 被返回的节点以 Node 对象的形式返回。
+    alert(sibling.length);
+    // alert(sibling.nodeName);
+    // alert(sibling.nodeValue);
+</script>
+</html>

@@ -1,0 +1,204 @@
+C
+D
+A
+A
+D
+C
+AB
+ABCG
+CD
+BCDE
+A
+D
+C
+D
+D
+C
+A
+AB
+ABCD
+ABC
+简答题
+一，Spring注解中@Autowired和@Resource的区别
+1，@Autowired 是Spring提供的，@Resource 是JDK提供的
+2，@Autowired 是去spring里面根据类型等获取参数，@Resource 是根据方法名称获取对象
+
+二，请简述AOP的原理？AOP有何应用价值
+AOP是基于动态代理，使用动态代理增强原来的对象和方法
+
+可以实现对业务逻辑之间的各个部分进行隔离，耦合度降低，可以不修改原来的代码，对
+已有的方法进行增强，减少重复代码，提高开发效率，维护方便
+
+三，springMVC可以实现的功能.
+
+
+
+四，Spring框架中，什么是控制反转？什么是依赖注入？有何区别？
+控制反转：将框架中所有的创建对象，都交给spring管理
+依赖注入：从Spring容器中，取出对象，给需要赋值的对象赋值。
+
+五，事务的四个特性和每种特性的说明
+原子性：事务是数据库操作的最小单位，要么一起失败，要么一起成功
+一致性：事务的操作是从一个一致性的状态转变向另一个一致性的状态
+持久性：事务操作完成后，他是永久不变的，不会对下次操作产生影响
+隔离性：事务与事务之间的操作，相互隔离，互不影响
+
+六，SpringMVC工作原理
+核心控制器，处理器映射器，处理器适配器，视图解析器，
+当web应用加载的时候，controller类里面的方法会被加载进处理器映射器
+当用户的请求到达核心控制器的时候，会直接去处理器映射器获取方法，获取到后返回一个处理器对象
+然后核心控制器拿着处理器对象，去处理器适配器执行方法，返回一个逻辑视图，
+然后核心控制器拿着逻辑视图，去视图解析器解析，返回一个物理视图，然后响应给页面
+
+七，简述Spring Bean的实例化有哪几种常见的方法及过程
+set 方法实例化
+构造函数实例化
+工厂类方法实例化
+
+八，在MyBatis开发中，通常一个Xml映射文件，都会写一个Dao接口与之对应，
+请问这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗？
+当mybatis加载的时候，会将这个Dao.xml的文件加载进工厂类里面，
+当sqlsession在执行方法的时候，会根据namespace+id，去执行对应的方法以及sql语句。
+
+dao接口里面的方法，参数不同时，不可以重载
+
+
+九，Spring控制器接受请求参数的常见方式有哪几种。
+1，可以写前端页面的name对象，对应的数据
+2，可以以对象封装，也可以以list，map封装
+3，name不一致时，可以使用requestparam封装
+
+十，请简述MyBatis框架的优势。
+使开发人员专注于书写规范的sql语句，不用花费心思去写多余的代码
+例如加载驱动，获取连接，封装结果集，等
+
+十一，请简述一下MyBatis的缓存分类和实现方法。
+一级缓存：存放在sqlsession 
+二级缓存：存放在sqlsessionFactory
+一级缓存自动开启，当执行sql语句，收到返回后，会将发给数据库的sql语句参数等作为key，返回的参数作为value，存放在一级缓存里面，
+	当下一次的执行的时候，回去对比sql语句及参数，如果相同，则不执行数据库操作，直接从缓存中获取
+二级缓存需要手动开启，在主配置文件中开启缓存块<cache></cashe>，然后每次执行dao层的方法的时候，需要手动提交，才会保存到二级缓存中
+	当下一次的执行的时候，回去对比sql语句及参数，如果相同，则不执行数据库操作，直接从缓存中获取
+
+
+十二，在MyBatis框架中，当实体类中的属性名和表中的字段名不一样，怎么办。
+使用parameterMap进行字段的设定，可以设置一对一
+
+三，编程题
+1，在SpringMVC框架中，
+通过AJAX请求http://localhost:8080/springmvcdemo/getUserList.action 
+向服务器发送查询用户列表请求，
+服务器端控制器返回包含所有用户对象User的集合对象userList，
+请根据此要求在横线处完善下述程序。(5分)
+
+    @RequestMapping(path = "/getUserList.action")
+    @ResponseBody
+    public List<User> getUserList() {
+        List<User> list = new ArrayList<User>();
+
+        for (int i = 0; i < 10; i++) {
+            User user = new User();
+            user.setId(i);
+            user.setName("ssm"+i);
+            user.setBirthday(new Date());
+            list.add(user);
+        }
+        return list;
+    }
+
+2，使用mybatis框架完善以下基于user表的CRUD操作。user表所对应的实体类如下：（14分）
+public class User {
+	private int id;
+	private String name;
+	private int age;
+	
+	public User(String name,int age){
+		this.name=name;
+		this.age=age;
+	}
+	
+}
+
+（1）请完善sql映射文件"com.qst.mapper.UserMapper"的实现：
+<insert id="insertUser" parameterType="User">
+	insert into user(id, name, age) values (null, #{name}, #{age});                                          
+</insert>
+
+<delete id="deleteUser" parameterType=" intger">
+	delete from user where id = #{id};	                                      
+</delete>
+		
+<update id="updateUser" parameterType="user ">
+	update from user set name = #{name}, age = #{age}  where id = #{id};	                                              
+</update>
+			
+<select id="selectUserById" parameterType="int" resultType="user">
+	select * from user where id =#{id};	                    
+</select>
+			
+<select id="selectAllUsers" resultType="user">
+	select * from user;                          
+</select>
+
+ (2) 在核心配置文件中配置sql映射文件:
+<configuration>
+	<mapper resource="com.bianyiit.dao.IUserDao.xml"/>
+</configuration>
+ (3)完善以下测试类中对user表的CRUD的操作:
+public void insertUser(int id) {
+		SqlSession session = sessionFactory.openSession();
+		
+		User user= new User("123", 20);
+
+		session.getMapper(IUserDao.class).insertUser(user);
+
+		sqlSession.commit();
+
+		sqlSession.close();
+}
+
+3，编写业务类UserService，包括addUser()、deleteUser()、updateUser()、queryUser()
+四个方法，使用Spring配置文件为UserService类配置事务管理；要求addUser()、deleteUser、
+updateUser()必须具有事务；queryUser()方法可以有事务，也可以没有。addUser()
+和updateUser()的隔离级别设置为可重复读Isolation.REPEATABLE_READ，
+其它方法使用默认隔离级别。（25分）
+
+public class UserService implements IUserService {
+
+    public void addUser() {
+        System.out.println(" 业务层 addUser ");
+    }
+
+    public void deleteUser() {
+        System.out.println(" 业务层 deleteUser ");
+    }
+
+    public void updateUser() {
+        System.out.println(" 业务层 updateUser ");
+    }
+
+    public void queryUser() {
+        System.out.println(" 业务层 queryUser ");
+    }
+}
+
+    <bean id="dataSourceTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <tx:advice id="transactionInterceptor" transaction-manager="dataSourceTransactionManager">
+        <tx:attributes>
+            <tx:method name="addUser" isolation="REPEATABLE_READ" propagation="REQUIRED" read-only="false" />
+            <tx:method name="deleteUser" propagation="REQUIRED" read-only="false" />
+            <tx:method name="updateUser" isolation="REPEATABLE_READ" propagation="REQUIRED" read-only="false" />
+            <tx:method name="queryUser" propagation="SUPPORTS" read-only="true" />
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:advisor advice-ref="transactionInterceptor"  pointcut="execution(* com.bianyiit.service.impl.*Service.*(..))"/>
+    </aop:config>
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的绑定</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+</head>
+<script>
+
+    /*    window.onload = function () {
+            var $button1 = $("#button1");
+            $button1.click(function () {
+                alert("点击");
+            })
+        };*/
+
+    // jQuery入口函数(dom文档加载完成之后，执行该函数中的代码)
+    $(function () {
+        var $button1 = $("#button1");
+        $button1.click(function () {
+            alert("点击");
+        })
+    });
+    $(function () {
+        $("#div1").css("background-color", "red");
+    });
+    $(function () {
+        $("#div2").css("backgroundColor", "pink");
+    });
+
+</script>
+
+<body>
+
+<div id="div1">div1.....</div>
+<div id="div2">div2.....</div>
+<input type="button" id="button1" value="按钮1">
+
+
+</body>
+</html>

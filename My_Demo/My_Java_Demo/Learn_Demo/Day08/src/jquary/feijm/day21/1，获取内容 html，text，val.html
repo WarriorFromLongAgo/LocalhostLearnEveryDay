@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取内容</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // 获取inputOne的value值
+            // alert($("#inputOne").val());
+            // $("#inputOne").val("李四");
+            // alert($("#inputOne").js_ru_men1());
+            // alert($("#inputOne").text());
+
+            // 获取divOne的标签体的内容
+            // var js_ru_men1 =  $("#divOne").js_ru_men1();
+            // alert(js_ru_men1);
+            // $("#divOne").js_ru_men1("aaa");
+
+            // 获取divOne文本内容
+            var text = $("#divOne").text();
+            // alert(text);
+            $("#divOne").text("bbbbbb");
+
+            $("#spanId").html("aaaaaa");
+        });
+    </script>
+
+</head>
+<body>
+
+<input type="text" id="inputOne" name="userName" value="zhangsan">
+<br>
+<div id="divOne"><p><a href="#">标题标签</a></p></div>
+<br>
+<br>
+<span id="spanId"></span>
+</body>
+</html>

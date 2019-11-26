@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.fff.dao.IUserDao">
+
+    <!--配置查询所有-->
+<!--    <select id="findAllDao" resultType="com.fff.domain.User">-->
+<!--        select * from mybatisdemo;-->
+<!--    </select>-->
+<!--    <select id="findAllDao" resultType="User">-->
+<!--        select * from mybatisdemo;-->
+<!--    </select>-->
+    <select id="findAllDao" resultType="user">
+        select * from mybatisdemo;
+    </select>
+
+<!--    <insert id="insertUserDao" parameterType="User">-->
+<!--        insert into mybatisdemo(id, username, birthday, sex, address)-->
+<!--        values (#{id}, #{username}, #{birthday}, #{sex}, #{address});-->
+<!--    </insert>-->
+    <insert id="insertUserDao" parameterType="User">
+        <selectKey keyColumn="id" keyProperty="id" order="BEFORE" resultType="int">
+            SELECT LAST_INSERT_ID();
+        </selectKey>
+
+        insert into mybatisdemo(id, username, birthday, sex, address)
+        values (#{id}, '${username}', #{birthday}, '${sex}', '${address}');
+    </insert>
+<!--    <insert id="insertUserDao" parameterType="User">-->
+<!--        insert into mybatisdemo(id, username, birthday, sex, address)-->
+<!--        values (#{id}, '${username}', #{birthday}, '${sex}', '${address}');-->
+<!--    </insert>-->
+
+    <delete id="deleteById" parameterType="Integer">
+        delete from mybatisdemo where id = #{index0};
+    </delete>
+
+    <delete id="deleteByIdAndUserName" parameterType="com.fff.domain.User">
+        delete from mybatisdemo where id = #{id} and username = #{username};
+    </delete>
+
+    <select id="findUserByName" parameterType="string">
+        select * from where username = #{userName};
+    </select>
+
+</mapper>

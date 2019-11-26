@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<students>
+    <student userid="u0001">
+        <name id="n0001">
+            <xing>fei</xing>
+            <ming>meng</ming>
+        </name>
+        <age>23</age>
+        <address>hubei</address>
+    </student>
+
+    <student userid="u0002">
+        <name id="n0002">feiding</name>
+        <age>20</age>
+        <address>hunan</address>
+    </student>
+
+</students>

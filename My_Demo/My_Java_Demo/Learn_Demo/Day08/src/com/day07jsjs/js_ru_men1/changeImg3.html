@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>换图片</title>
+</head>
+<body>
+<button id="btn">隐藏</button>
+<button id="btu">换</button>
+<br />
+<img src="../img/21-16112213564S26.gif" id="img" width="300px" />
+</body>
+<script>
+    var btn = document.getElementById("btn");
+    var btu = document.getElementById("btu");
+    var img = document.getElementById("img");
+    var xia = 0;
+    btn.addEventListener("click", function () {
+        //判断按钮文字内容
+        if (btn.innerText === "隐藏") {
+            //当按钮文字为隐藏时,图片隐藏
+            img.style.opacity = 0;
+            //同时,按钮文字变成现实  下面同理
+            btn.innerText = "显示";
+        } else {
+            img.style.opacity = 1;
+
+            btn.innerText = "隐藏";
+        }
+    });
+    var srcc1 = "../img/21-161122135G1O2.gif";
+    var srcc2 = "../img/21-161122135GK06.gif";
+    var srcc3 = "../img/21-16112213564S26.gif";
+    var srcc4 = "../img/21-161122135630O1.gif";
+
+    var imgs = [srcc1, srcc2, srcc3, srcc4];
+    //给"换"添加点击事件
+    btu.addEventListener("click", function () {
+        if (btn.innerText === "隐藏") {
+            if (xia < 1) {
+                xia++;
+            } else {
+                xia = 0;
+            }
+            img.src = imgs[xia];
+        } else {
+            alert("图片隐藏，不能切换");
+        }
+
+    });
+
+</script>
+
+</html>

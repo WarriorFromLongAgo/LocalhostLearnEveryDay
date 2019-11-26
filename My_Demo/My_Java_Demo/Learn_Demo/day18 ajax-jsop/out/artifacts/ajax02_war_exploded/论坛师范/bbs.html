@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bbs.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+
+</head>
+<body>
+
+<div class="bbs">
+    <header><span>我要发帖</span></header>
+
+    <section>
+        <ul></ul>
+    </section>
+
+    <div class="post">
+        <input class="title" placeholder="请输入标题（1-50个字符）">
+        所属版块：
+        <select>
+            <option>请选择版块</option>
+            <option>电子书籍</option>
+            <option>新课来了</option>
+            <option>新手报到</option>
+            <option>职业规划</option>
+        </select>
+
+        <textarea class="content"></textarea>
+        <input class="btn" value="发布">
+        <img src= alt="">
+    </div>
+</div>
+
+<script>
+    $(function () {
+
+        //点击我要发帖按钮
+        $("span").click(function () {
+            //显示发布框
+            $("div.post").show();
+        });
+        //点击发布按钮
+        $("input.btn").click(function () {
+            //获取用户输入的内容
+            //获取标题内容
+            var title = $("input.title").val();
+            //获取所属板块信息
+            var option = $("select option:selected").html();
+            //隐藏div
+            $("div.post").hide();
+            //获取当前系统时间(发帖时间)
+            var date = new Date();
+            var year = date.getFullYear();//获取当前系统时间的年部分
+            var month = date.getMonth() + 1;//获取当前系统时间的月部分
+            var day = date.getDate();//获取一个月中的第几天
+            var hour = date.getHours();//获取当前系统时间的小时部分
+            var minute = date.getMinutes();//获取当前系统时间的分钟部分
+            var second = date.getSeconds();//获取当前系统时间的秒部分
+            var currentTime = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+            //随机的获取头像
+            var arr = ["images/tou01.jpg", "images/tou02.jpg", "images/tou03.jpg", "images/tou04.jpg"];
+            //随机生成0-3的整数
+
+            var randomNum = Math.floor(Math.random() * (3 + 1));
+            //在ul里面追加新的内容
+            $("ul").append("<li><div><img src=" + arr[randomNum] + "></div><h1>" + title + "</h1><p><span>"
+                + option + "</span><span>" + currentTime + "</span></p></li>");
+        });
+    });
+</script>
+</body>
+</html>

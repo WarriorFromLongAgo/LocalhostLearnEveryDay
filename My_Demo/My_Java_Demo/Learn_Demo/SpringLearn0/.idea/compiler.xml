@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="day02spring" />
+        <module name="project_day03" />
+        <module name="project_day03_c3p0" />
+        <module name="project_day03_c3p0_2" />
+        <module name="spring_all_annotation" />
+        <module name="spring_annotation" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="day02spring" target="1.5" />
+      <module name="project_day03" target="1.5" />
+      <module name="project_day03_c3p0" target="1.5" />
+      <module name="project_day03_c3p0_2" target="1.5" />
+      <module name="spring0" target="1.5" />
+      <module name="spring_all_annotation" target="1.5" />
+      <module name="spring_annotation" target="1.5" />
+      <module name="srping00" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

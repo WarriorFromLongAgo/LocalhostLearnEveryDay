@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // $("#name").click(function () {
+            //     alert("触发率额。 ");
+            // });
+
+            // 给name绑定鼠标移动到元素至善搞得事件。绑定鼠标移出的时间，
+            $("#name").mouseover(function () {
+                $("#name").prop("value","鼠标来了")
+            });
+            $("#name").mouseout(function () {
+                $("#name").prop("value","鼠标走了")
+            });
+
+            // 使文本输入框获得焦点
+            $("#name").focus();
+
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+
+<input type="text" id="name" value="绑定点击事件">
+
+</body>
+</html>

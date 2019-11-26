@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $.fn.extend({
+            allCheck: function () {
+                this.prop("checked", true)
+            },
+
+            allNoCheck: function () {
+                this.prop("checked", false)
+            }
+        });
+        $(function () {
+            $("#button1").click(function () {
+                $("input[type='checkbox']").allCheck();
+            });
+
+            $("#button2").click(function () {
+                $("input[type='checkbox']").allNoCheck();
+            });
+        });
+    </script>
+</head>
+<body>
+
+<input type="button" id="button1" value="点击选中复选框">
+<input type="button" id="button2" value="点击取消选中复选框">
+<br>
+<input type="checkbox" value="football">足球
+<input type="checkbox" value="basketball">篮球
+<input type="checkbox" value="volleyball">排球
+
+
+</body>
+</html>

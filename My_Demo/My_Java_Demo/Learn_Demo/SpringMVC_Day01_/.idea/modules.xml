@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springmvc_day01_rumen/springmvc_day01_rumen.iml" filepath="$PROJECT_DIR$/springmvc_day01_rumen/springmvc_day01_rumen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_spring_servlet/springmvc_spring_servlet.iml" filepath="$PROJECT_DIR$/springmvc_spring_servlet/springmvc_spring_servlet.iml" />
+    </modules>
+  </component>
+</project>

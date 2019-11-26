@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器</title>
+</head>
+<body>
+<input type="button" value="保存" class="mini" name="ok"/>
+
+<input type="button" value="改变 body 内所有 div 的背景色为红色" id="b3"/>
+<input type="button" value="改变 body 内子 div 的背景色为红色" id="b4"/>
+<!--div( span(span) span )-->
+<!--$（"div span"）选择三个span-->
+<!--$（"div > span"）选择 两个个span，两个儿子，孙子不算-->
+<h1>有一种奇迹叫坚持</h1>
+<h2>自信源于努力</h2>
+
+<div id="one"> id = one</div>
+<div id="onee"> id = onee</div>
+<div class="mini"> class = mini</div>
+<div class="mini2"> class = mini2</div>
+<p><span> span 131231 </span></p>
+<p><span> span 131231 </span></p>
+
+</body>
+</html>

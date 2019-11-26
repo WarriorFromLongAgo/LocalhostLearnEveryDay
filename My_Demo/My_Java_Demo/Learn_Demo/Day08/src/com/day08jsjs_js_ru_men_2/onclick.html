@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="img/01.gif" id="img"/>
+<img src="img/off.gif" id="img2">
+<h id="hh">hhh</h>
+
+<script>
+    var i = 2;
+    var elementById = document.getElementById("img");
+    elementById.onclick = function () {
+        if (i === 1) {
+            elementById.src = "img/02.gif";
+            i++;
+        } else {
+            elementById.src = "img/01.gif";
+            i = 1;
+        }
+    };
+
+    var j = 2;
+    var elementById1 = document.getElementById("img2");
+    elementById1.onclick = function () {
+        if (j === 1) {
+            elementById1.src = "img/off.gif";
+            j++;
+        } else {
+            elementById1.src = "img/on.gif";
+            j = 1;
+        }
+    };
+
+    var elementById2 = document.getElementById("hh");
+    elementById2.onclick = function () {
+        var innerText = elementById2.innerText;
+        innerText = "HHHHH";
+        elementById2.innerHTML = innerText;
+    }
+</script>
+</body>
+</html>

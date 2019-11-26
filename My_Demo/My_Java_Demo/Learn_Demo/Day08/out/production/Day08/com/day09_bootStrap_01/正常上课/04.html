@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a>llllll</a>
+
+<!--<button id="setButton" onclick="setButton()">设置属性</button>-->
+<!--<button id="remove11" >删除属性</button>-->
+<input type="button" id="set11" value="设置属性">
+<!--<input type="button" onclick="setButton()" value="设置属性">-->
+<input type="button" value="删除属性">
+
+
+<script>
+
+
+    var setButton = document.getElementById("set11");
+    console.log(setButton);
+
+    setButton.onclick = function () {
+        var setAhref = document.getElementsByTagName('a')[0];
+        console.log(setAhref);
+        setAhref.setAttribute("href", "03.html");
+    };
+
+</script>
+
+</body>
+</html>

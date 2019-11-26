@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hello-spring-cloud-config" />
+        <module name="hello-spring-cloud-eureka" />
+        <module name="hello-spring-cloud-eureka2" />
+        <module name="hello-spring-cloud-service-admin" />
+        <module name="hello-spring-cloud-service-admin2" />
+        <module name="hello-spring-cloud-web-admin-feign" />
+        <module name="hello-spring-cloud-web-admin-ribbon" />
+        <module name="hello-spring-cloud-zuul" />
+        <module name="springcloud_qianfeng" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="hello_spring_cloud_service_consumer" target="1.8" />
+      <module name="springcloud_qianfeng" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

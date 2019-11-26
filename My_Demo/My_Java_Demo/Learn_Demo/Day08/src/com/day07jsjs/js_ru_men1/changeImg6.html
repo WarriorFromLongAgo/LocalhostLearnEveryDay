@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单击循环切换图片</title>
+    <script>
+        var i = 1;
+
+        function nextImg() {
+            i++;
+//步骤2：获取页面元素
+            var next = document.getElementById("nImg");
+//步骤3：更改元素的src属性
+            next.src = "../img2/0" + i + ".gif";
+            if (i >= 4) {
+                i = 1;
+            }
+        }
+        /*var elementById = document.getElementById("chage");
+        elementById.onclick=nextImg;*/
+    </script>
+</head>
+<body>
+<div>
+  <!--  -->
+    <!--步骤1：绑定onclick事件-->
+
+    <input type="button" id="botton1" value="查询" onclick="nextImg()" />
+    <button id="chage" onclick="nextImg()">下一张</button>
+    <br/>
+    <!--需自己准备3张图片-->
+    <img src="../img2/01.gif" id="nImg" width="534" height="394"/>
+</div>
+
+</body>
+</html>

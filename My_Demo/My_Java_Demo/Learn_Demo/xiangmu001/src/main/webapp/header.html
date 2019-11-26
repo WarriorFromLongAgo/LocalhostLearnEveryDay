@@ -1,0 +1,117 @@
+<!-- 头部 start -->
+
+<script src="js/getParameter.js"></script>
+<script>
+    $(function () {
+        //查询用户信息
+        $.get("/qunar/user/findLoginUser", {}, function (data) {
+            //{uid:1,name:'李四'}
+            if (data) {
+                var message = data.name;
+                $(".login_out").hide();
+                $(".login").show();
+                $("#userNameSpan").html(message);
+            } else {
+                $(".login_out").show();
+                $(".login").hide();
+            }
+        }, "json");
+
+        /*<!-- <li class="nav-active"><a href="index.html">首页</a></li>
+                        <li><a href="route_list.html">门票</a></li>
+                        <li><a href="route_list.html">酒店</a></li>
+                        <li><a href="route_list.html">香港车票</a></li>
+                        <li><a href="route_list.html">出境游</a></li>
+                        <li><a href="route_list.html">国内游</a></li>
+                        <li><a href="route_list.html">港澳游</a></li>
+                        <li><a href="route_list.html">抱团定制</a></li>
+                        <li><a href="route_list.html">全球自由行</a></li>
+                        <li><a href="favoriterank.html">收藏排行榜</a></li>-->*/
+        /*返回所有的那啥分类
+        * 返回的是一个list集合，list集合里面存放的是分类对象
+        * 虽然返回的jsonString，但是在接收的时候已经转为了list
+        * */
+        $.get("/qunar/category/findAll", {}, function (data) {
+            var categoryHtml = "<li class='nav-active'><a href='index.html'>首页</a></li>";
+
+            for (var i = 0; i < data.length; i++) {
+                var category = data[i];
+                var lis = "<li><a href='route_list.html?cid=" + category.cid + "'>" + category.cname + "</a></li>";
+                categoryHtml = categoryHtml + lis;
+            }
+            categoryHtml = categoryHtml + "<li><a href='favoriterank.html'>收藏排行榜</a></li>";
+
+            $("ul#category").html(categoryHtml);
+
+        }, "json");
+
+        $("a#searchButton").click(function () {
+            var searchInput = $("input#searchInput").val();
+            // alert(searchInput);
+            var cid = getParameter("cid");
+            var newHref = "route_list.html?cid=" + cid + "&searchInput=" + searchInput;
+            location.href = newHref;
+
+        });
+
+    });
+
+</script>
+
+<header id="header">
+
+    <div class="shortcut">
+        <!-- 未登录状态  -->
+        <div class="login_out">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+        </div>
+        <!-- 登录状态  -->
+        <div class="login">
+
+            <span id="userNameSpan"></span>
+            <a href="myfavorite.html" class="collection">我的收藏</a>
+            <a href="javascript:void(0)" class="collection">购物车</a>
+            <a href="javascript:location.href='/qunar/user/exit';">退出</a>
+        </div>
+    </div>
+
+    <div class="header_wrap">
+        <div class="topbar">
+            <div class="logo">
+                <a href="#"><img src="images/logo2.png" alt=""></a>
+            </div>
+            <div class="search">
+                <input name="" id="searchInput" type="text" placeholder="请输入路线名称" class="search_input"
+                       autocomplete="off">
+                <a id="searchButton" class="search-button">搜索</a>
+            </div>
+            <div class="hottel">
+                <div class="hot_pic">
+                    <img src="images/hot_tel.jpg" alt="">
+                </div>
+                <div class="hot_tel">
+                    <p class="hot_time">客服热线(24小时)</p>
+                    <p class="hot_num">0731-88505867</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- 头部 end -->
+<!-- 首页导航 -->
+<div class="navitem">
+    <ul id="category" class="nav">
+        <!-- <li class="nav-active"><a href="index.html">首页</a></li>
+         <li><a href="route_list.html">门票</a></li>
+         <li><a href="route_list.html">酒店</a></li>
+         <li><a href="route_list.html">香港车票</a></li>
+         <li><a href="route_list.html">出境游</a></li>
+         <li><a href="route_list.html">国内游</a></li>
+         <li><a href="route_list.html">港澳游</a></li>
+         <li><a href="route_list.html">抱团定制</a></li>
+         <li><a href="route_list.html">全球自由行</a></li>
+         <li><a href="favoriterank.html">收藏排行榜</a></li>-->
+    </ul>
+</div>
+    

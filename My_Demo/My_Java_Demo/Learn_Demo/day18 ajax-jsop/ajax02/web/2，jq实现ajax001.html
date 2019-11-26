@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <!--    必须重新导入，不能够复制粘贴      -->
+    <!--    <script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>-->
+
+
+</head>
+<body>
+
+<input type="button" value="发送异步请求" onclick="fun()">
+<input type="text">
+
+<script type="text/javascript">
+    function fun() {
+        $.ajax({
+            url: "ajaxServlet1111",  //请求路径
+            type: "POST",
+            // date: "userName=tom&age=22",
+            date: {"userName": "tom", "age": 22},
+            success: function (date) {
+                alert(date);
+            },
+            error: function () {
+                alert("出错啦。。。");
+            }
+        });
+    }
+
+
+</script>
+
+
+</body>
+</html>

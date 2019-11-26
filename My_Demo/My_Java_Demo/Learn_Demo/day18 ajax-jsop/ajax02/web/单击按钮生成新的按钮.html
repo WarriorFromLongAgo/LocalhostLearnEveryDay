@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <!--    必须重新导入，不能够复制粘贴      -->
+    <!--    <script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>-->
+    <script type="text/javascript">
+        $(function () {
+            var count = 1;
+
+            $("input#button1").click(function () {
+                var inputObj = $("<input type='button' value='按钮'>");
+                count++;
+                $(this).before(inputObj);
+            });
+
+            $("input#button2").click(function () {
+                var inputObj = $("<input type='button' value='按钮'>");
+                count++;
+                $(this).after(inputObj);
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<input type="button" value="单击在前面加" id="button1">
+<br>
+<input type="button" value="单击在后面加" id="button2">
+
+
+</body>
+</html>

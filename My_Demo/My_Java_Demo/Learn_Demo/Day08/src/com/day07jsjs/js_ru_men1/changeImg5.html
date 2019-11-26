@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>changeImages</title>
+    <meta name="author" content="Administrator"/>
+    <!-- Date: 2014-06-16 -->
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 384px;
+            height: 512px;
+        }
+
+        #content {
+            margin: 0 auto;
+            width: 384px;
+            height: 512px;
+        }
+    </style>
+    <script>
+        var b = 1;//定义全局变量，否则每次点击都会从新计数
+        function changeImages() {
+            a = document.getElementById('show');//获取目标Id
+            if (b <= 4) {//图片张数，遍历每张图
+                a.src = "../img2/0" + b + ".gif";//替换位置
+                b++;
+            } else {
+                b = 1;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="content">
+    <img id="show" src="../img2/01.gif" alt="点击换图" onclick="changeImages()">
+</div>
+</body>
+</html>

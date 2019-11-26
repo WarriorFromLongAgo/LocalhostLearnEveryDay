@@ -1,0 +1,5 @@
+com\funtl\hello\spring\cloud\web\admin\ribbon\controller\AdminController.class
+com\funtl\hello\spring\cloud\web\admin\ribbon\config\RestTemplateConfiguration.class
+com\funtl\hello\spring\cloud\web\admin\ribbon\config\HystrixDashboardConfiguration.class
+com\funtl\hello\spring\cloud\web\admin\ribbon\WebAdminRibbonApplication.class
+com\funtl\hello\spring\cloud\web\admin\ribbon\service\AdminService.class

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        var imgArr = [];
+        imgArr[1] = "../img/01.gif";
+        imgArr[2] = "../img/02.gif";
+        imgArr[3] = "../img/03.gif";
+        imgArr[4] = "../img/04.gif";
+        var intertval;
+        var index;
+
+        $(function () {
+            $("#start").prop("disabled", false);
+            $("#stop").prop("disabled", true);
+
+            // 1，给开始按钮绑定事件
+            $("#start").click(function () {
+                $("#start").prop("disabled", true);
+                $("#stop").prop("disabled", false);
+                intertval = setInterval(function () {
+                    // 生成随机角标
+                    // 设置小相框的src属性
+                    index = Math.floor(Math.random() * 7);
+                    $("#img001").prop("src", imgArr[index]);
+                }, 100);
+            });
+
+            // 1，给停止按钮绑定事件
+            $("#stop").click(function () {
+                $("#start").prop("disabled", false);
+                $("#stop").prop("disabled", true);
+                clearInterval(intertval);
+                $("#img101").prop("src", imgArr[index]).hide();
+                $("#img101").show(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+<!--小相框-->
+<div style="border-style: dotted;width: 200px;height: 100px">
+    <img id="img001" src="../img/01.gif" alt="" width="200px" height="100px">
+</div>
+
+<!--大相框-->
+<div style="border-style: double;width: 600px;height: 400px;position: absolute;left: 500px;top: 10px;">
+    <img id="img101" src="../img/01.gif" alt="" width="600" height="400">
+</div>
+
+<!--开始按钮-->
+<input type="button" id="start" value="点击开始" width="150px" height="150px">
+
+<!--停止按钮-->
+<input type="button" id="stop" value="点击t停止" width="150px" height="150px">
+
+
+</body>
+</html>

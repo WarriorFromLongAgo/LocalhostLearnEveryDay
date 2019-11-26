@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/diyspringbootstarter/diyspringbootstarter.iml" filepath="$PROJECT_DIR$/diyspringbootstarter/diyspringbootstarter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/diyspringbootstarterautoconfig/diyspringbootstarterautoconfig.iml" filepath="$PROJECT_DIR$/diyspringbootstarterautoconfig/diyspringbootstarterautoconfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBootday1/springBootday1.iml" filepath="$PROJECT_DIR$/springBootday1/springBootday1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_jpa/springboot_jpa.iml" filepath="$PROJECT_DIR$/springboot_jpa/springboot_jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_logging/springboot_logging.iml" filepath="$PROJECT_DIR$/springboot_logging/springboot_logging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_mybatis/springboot_mybatis.iml" filepath="$PROJECT_DIR$/springboot_mybatis/springboot_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootday102/springbootday102.iml" filepath="$PROJECT_DIR$/springbootday102/springbootday102.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootday1点1/springbootday1点1.iml" filepath="$PROJECT_DIR$/springbootday1点1/springbootday1点1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootjdbc2/springbootjdbc2.iml" filepath="$PROJECT_DIR$/springbootjdbc2/springbootjdbc2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootresouces/springbootresouces.iml" filepath="$PROJECT_DIR$/springbootresouces/springbootresouces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springdata_jdbc/springdata_jdbc.iml" filepath="$PROJECT_DIR$/springdata_jdbc/springdata_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thymeleaf1/thymeleaf1.iml" filepath="$PROJECT_DIR$/thymeleaf1/thymeleaf1.iml" />
+    </modules>
+  </component>
+</project>

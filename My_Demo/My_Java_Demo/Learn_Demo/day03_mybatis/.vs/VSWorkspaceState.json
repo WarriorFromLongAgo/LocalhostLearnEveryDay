@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\resources",
+    "\\src\\main\\resources\\com",
+    "\\src\\main\\resources\\com\\feijm",
+    "\\src\\main\\resources\\com\\feijm\\dao",
+    "\\src\\test",
+    "\\src\\test\\java",
+    "\\src\\test\\java\\com",
+    "\\src\\test\\java\\com\\feijm",
+    "\\src\\test\\java\\com\\feijm\\test"
+  ],
+  "SelectedNode": "\\src\\main\\resources\\com\\feijm\\dao\\IPeopleDao.xml",
+  "PreviewInSolutionExplorer": false
+}

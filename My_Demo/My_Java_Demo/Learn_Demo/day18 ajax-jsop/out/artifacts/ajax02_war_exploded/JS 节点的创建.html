@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var aObj = document.createElement("a");
+    aObj.setAttribute("href", "https://www.hao123.com/?tn=57028281_hao_pg");
+    aObj.innerHTML = "超链接";
+    document.getElementsByTagName("body")[0].appendChild(aObj);
+
+    var pObj = document.createElement("p");
+    pObj.setAttribute("id", "pppp");
+    pObj.innerHTML = "段落";
+    document.getElementsByTagName("body")[0].insertBefore(pObj, aObj);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            setTimeout(show1, 3000);
+            setTimeout(noShow, 8000);
+        });
+
+        function show1() {
+            $("#div1").show("slow");
+        }
+
+        function noShow() {
+            $("#div1").hide("slow");
+        }
+
+    </script>
+</head>
+<body>
+<!--    广告div-->
+<div id="div1" style="display: none">
+    <img src="../img/1.gif" width="100%" alt="">
+</div>
+5842047
+<!--    正文部分-->
+<div id="content">
+    正文部分
+</div>
+</body>
+</html>

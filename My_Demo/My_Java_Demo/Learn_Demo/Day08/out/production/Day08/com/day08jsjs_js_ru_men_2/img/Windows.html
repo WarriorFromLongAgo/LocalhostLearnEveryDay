@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="开始统计" id="start" onclick="starttt();">
+<input type="text" id="inputValue">
+<input type="button" value="结束统计" id="stop" onclick="stop1();">
+
+<script>
+    var i = 0;
+    var interval;
+
+    function starttt() {
+        interval = setInterval(start1, 500);
+
+    }
+
+    function start1() {
+        var inputValue = document.getElementById("inputValue");
+        inputValue.value = i;
+        i = ++i;
+    }
+
+    function stop1() {
+        clearInterval(interval);
+    }
+
+</script>
+
+</body>
+</html>

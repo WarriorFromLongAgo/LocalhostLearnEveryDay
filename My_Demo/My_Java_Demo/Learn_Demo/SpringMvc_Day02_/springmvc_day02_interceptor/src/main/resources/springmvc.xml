@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.fff">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!--视图解析器-->
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--文件的目录-->
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <!--文件的后缀名-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--告诉 dispatcherServlet 有些资源不需要拦截-->
+    <mvc:resources mapping="/js/**" location="/js/"/>
+    <mvc:resources mapping="/image/**" location="/image/"/>
+    <mvc:resources mapping="/css/**" location="/css/"/>
+
+    <!--配置自定义类型转换器-->
+    <!--<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">-->
+    <!--<property name="converters">-->
+    <!--<set>-->
+    <!--<bean class="com.fff.util.StringToDateConverter"/>-->
+    <!--</set>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <!--配置异常处理器-->
+    <!--<bean id="diyExceptionResolver" class="com.fff.diyexception.DiyExceptionResolver"/>-->
+
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--你要拦截的具体的方法  /**所有的方法全拦 /interceptor/**这个类下的所有方法全拦 -->
+            <mvc:mapping path="/interceptor/**"/>
+
+            <!--你不要拦截的方法 -->
+            <!--<mvc:exclude-mapping path=""-->
+
+            <!--配置拦截器的对象-->
+            <bean class="com.fff.interceptor.DiyInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--开启SpringMvc框架的注解支持-->
+    <mvc:annotation-driven/>
+
+
+</beans>

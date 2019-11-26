@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>我的第一个js</h1>
+    <p>JavaScript 能够对事件作出反应。比如对按钮的点击：</p>
+    <button type = "button" onclick = "alert('欢迎!')">点击</button>
+    <p id="demo1">
+        js能够改变html的内容
+    </p>
+    <script>
+        function myjs1() {
+            x = document.getElementById("demo1");
+            x.innerHTML = "Hello js";
+        }
+    </script>
+    <button type="button" onclick="myjs1()">点击这里修改文字</button>
+    <script src="../js/jd1111.js"></script>
+    <input type="button" onclick="window.location.reload()" value="刷新"/>
+</body>
+</html>

@@ -1,0 +1,28 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  type-aliases-package: com.fff.domain
+  mapper-locations:
+  - classpath:mybatis/mapper/*.xml
+
+spring:
+  application:
+#    向外暴露的微服务名称
+    name: microservicecloud-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot1
+    username: root
+    password: 123
+    dbcp2:
+#      连接池最小连接数量
+      min-idle: 5
+#      初始化连接数
+      initial-size: 5
+#      最大连接数
+      max-total: 5
+#      等待连接获取的最大时间
+      max-wait-millis: 200

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <!--    必须重新导入，不能够复制粘贴      -->
+    <!--    <script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>-->
+    <script>
+
+        $(function () {
+            $("select#shi").change(function () {
+                var val = $(this).val();
+
+                if ("beijing" === val) {
+                    $("select#city").html("    <option value=\"\">北京市东城区</option>\n" +
+                        "    <option value=\"\">北京市西城区</option>\n" +
+                        "    <option value=\"\">北京市南城区</option>\n" +
+                        "    <option value=\"\">北京市北城区</option>")
+                }
+                if ("shanghai" === val) {
+                    $("select#city").html("    <option value=\"\">上海市东城区</option>\n" +
+                        "    <option value=\"\">上海市西城区</option>\n" +
+                        "    <option value=\"\">上海市南城区</option>\n" +
+                        "    <option value=\"\">上海市北城区</option>")
+                }
+                if ("hubei" === val) {
+                    $("select#city").html("    <option value=\"\">湖北省东城区</option>\n" +
+                        "    <option value=\"\">湖北省西城区</option>\n" +
+                        "    <option value=\"\">湖北省南城区</option>\n" +
+                        "    <option value=\"\">湖北省北城区</option>")
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+兴趣爱好：
+<select id="shi">
+    <option value="beijing">北京市</option>
+    <option value="shanghai">上海市</option>
+    <option value="hubei">湖北省</option>
+</select>
+
+<select id="city">
+    <option value="">北京市东城区</option>
+    <option value="">北京市西城区</option>
+    <option value="">北京市南城区</option>
+    <option value="">北京市北城区</option>
+</select>
+
+
+</body>
+</html>

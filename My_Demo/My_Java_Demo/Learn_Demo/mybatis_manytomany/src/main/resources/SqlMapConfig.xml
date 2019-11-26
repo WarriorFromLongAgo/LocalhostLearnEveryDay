@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+
+    <properties resource="jdbc.properties"></properties>
+
+    <typeAliases>
+        <!--<typeAlias type="com.bianyiit.com.bianyiit.domain.User" alias="user"/>-->
+        <!--用package指定的包，默认都会起别名，别名就是类名-->
+        <package name="com.fff.domain"></package>
+    </typeAliases>
+
+
+    <!--环境信息-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <!--数据库连接池-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.mysql.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+
+            </dataSource>
+        </environment>
+    </environments>
+    <!--映射文件位置-->
+    <mappers>
+        <package name="com.fff.dao"></package>
+    </mappers>
+
+</configuration>

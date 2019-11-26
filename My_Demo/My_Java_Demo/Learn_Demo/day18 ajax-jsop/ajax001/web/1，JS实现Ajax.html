@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.4.1.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>
+
+    <script>
+        function fun() {
+            // 1，获取核心对象
+            var xmlhttp;
+            // 如果是低版本浏览器
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            // 2，建立连接
+            xmlhttp.open("GET", "ajaxServlet?userName=feijm", true);
+            // method：请求的类型；GET 或 POST
+            // url：文件在服务器上的位置
+            // async：true（异步）或 false（同步）
+
+            // send(string)    string：仅用于 POST 请求
+            // 将请求发送到服务器。
+            xmlhttp.send();
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+<input type="button" value="发送异步请求" onclick="fun()">
+
+</body>
+</html>

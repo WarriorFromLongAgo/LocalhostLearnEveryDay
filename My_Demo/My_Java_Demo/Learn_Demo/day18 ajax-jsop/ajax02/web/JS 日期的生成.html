@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+当前系统时间: <span id="s1"></span>
+
+<script>
+    function show() {
+        var date = new Date();
+        var year = date.getFullYear();//获取当前系统时间的年部分
+        var month = date.getMonth() + 1;//获取当前系统时间的月部分
+        var day = date.getDate();//获取一个月中的第几天
+        var hour = date.getHours();//获取当前系统时间的小时部分
+        var minute = date.getMinutes();//获取当前系统时间的分钟部分
+        var second = date.getSeconds();//获取当前系统时间的秒部分
+        var currentTime = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+        //给span标签设置文本内容
+        document.getElementById("s1").innerHTML = currentTime;
+    }
+
+    //使用定时器函数。每隔1000毫秒就调用该函数一次
+    window.setInterval("show()", 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示和隐藏动画</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        function showAll() {
+            // 显示div
+            // $("#div1").show("normal", "linear", function () {
+            //     alert("显示了");
+            // })
+            $("#div1").show("normal", "linear")
+        }
+
+        function hideAll() {
+            // 隐藏div
+            // $("#div1").hide("normal", "linear", function () {
+            //     alert("隐藏了");
+            // })
+            $("#div1").hide("normal", "linear")
+        }
+
+        function toggleAll() {
+            $("#div1").toggle("slow","linear")
+        }
+
+    </script>
+</head>
+<body>
+
+<input type="button" id="showDiv" onclick="hideAll()" value="点击按键隐藏div">
+<input type="button" id="noShowDiv" onclick="showAll()" value="点击按键显示div">
+<input type="button" id="show-noShow" onclick="toggleAll()" value="点击按键切换显示和隐藏div">
+
+<div id="div1" style="width: 200px;height: 200px;background-color: #2b669a">
+    div显示和隐藏
+</div>
+
+</body>
+</html>

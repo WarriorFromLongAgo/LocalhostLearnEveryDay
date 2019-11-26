@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <script>
+        // 点击超链接或者图片，需要换一张
+        // 1，给超链接和图片点击事件
+        // 2，重新设置图片的src属性
+        window.onload = function () {
+            // 1，获取图片的对象
+            var verificationCode = document.getElementById("VerificationCode");
+            verificationCode.onclick = function () {
+                var date = new Date().getTime();
+                verificationCode.src = "/numPhoto_war_exploded/verificationCodeServlet?" + date;
+            };
+
+            var changeVerificationCode = document.getElementById("changeVerificationCode");
+            // changeVerificationCode.onclick = function () {
+            //     var date = new Date().getTime();
+            //     changeVerificationCode.src = "/numPhoto_war_exploded/verificationCodeServlet?" + date;
+            // };
+            changeVerificationCode.onclick=function () {
+                var verificationCode = document.getElementById("VerificationCode");
+                var date = new Date().getTime();
+                verificationCode.src = "/numPhoto_war_exploded/verificationCodeServlet?" + date;
+            };
+
+            var changeVerificationCodeImg = document.getElementById("changeVerificationCodeImg");
+            changeVerificationCodeImg.onclick = function () {
+                var date = new Date().getTime();
+                changeVerificationCodeImg.src = "/numPhoto_war_exploded/verificationCodeServlet?" + date;
+            };
+        }
+
+    </script>
+
+</head>
+<body>
+<img src="/numPhoto_war_exploded/verificationCodeServlet" id="VerificationCode">
+<button id="changeVerificationCode">看不清，换一个</button>
+<!--<input type="button" id="changeVerificationCode" value="看不清，换一个">-->
+<a id="changeVerificationCodeImg" href="">看不清，换一个</a>
+</body>
+</html>

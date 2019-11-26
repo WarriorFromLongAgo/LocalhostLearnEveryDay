@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左移和右移</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $("#toRight").click(function () {
+                $("#right").append($("#left option:selected"))
+            });
+
+            $("#toLeft").click(function () {
+                $("#left").append($("#right option:selected"))
+            });
+        });
+    </script>
+</head>
+<body>
+<table align="center">
+    <tr style="width: 100px;height: 200px">
+        <td rowspan="2">
+            <div class="border">
+                <select name="left" id="left" multiple="multiple" style="height: 150px;width: 100px;text-align: center">
+                    <option value="">张三</option>
+                    <option value="">李四</option>
+                    <option value="">王五</option>
+                    <option value="">万一</option>
+                </select>
+            </div>
+        </td>
+        <td>
+            <input type="button" id="toRight" value="-->"><br><br><br>
+            <input type="button" id="toLeft" value="<--">
+        </td>
+        <td rowspan="2">
+            <select name="right" id="right" multiple="multiple" style="height: 150px;width: 100px;text-align: center">
+                <option value="">赵二</option>
+                <option value="">六六</option>
+                <option value="">七七</option>
+                <option value="">八八</option>
+            </select>
+        </td>
+    </tr>
+    <!--    <tr>-->
+    <!--        <td>-->
+
+    <!--        </td>-->
+    <!--    </tr>-->
+</table>
+
+
+</body>
+</html>

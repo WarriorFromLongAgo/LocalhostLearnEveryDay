@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切换图片</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+        // 需求：点击上面的图片，将其追加到发言框中
+        $(function () {
+            // 1，给img图片添加click时间
+            $("ul img").click(function () {
+                // 2，追加到p标签中
+                // $(".word").empty();
+                $("p img").remove();
+                // $(".word").append("<strong>请发言<strong>");
+                $(".word").append($(this).clone());
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<div class="emoji">
+
+    <ul>
+        <li><img src="../img/1.gif" height="200" width="200" alt=""></li>
+        <li><img src="../img/2.gif" height="200" width="200" alt=""></li>
+    </ul>
+    <p class="word">
+        <strong>请发言：</strong>
+        <img src="../img/1.gif" height="200" width="200" alt="">
+    </p>
+
+</div>
+
+</body>
+</html>

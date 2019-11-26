@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var aint = "123";
+    var bint = 123;
+    document.write(aint + "<br />");
+    document.write(bint + "<br />");
+    document.write(typeof aint + "<br />");
+    document.write(typeof bint + "<br />");
+    document.write(aint + bint + "<br />");
+    document.write(bint + bint + "<br />");
+    var atrue = true;
+    var aNull = null;
+    var aUndefined;
+    document.write(aUndefined + "<br />");
+    document.write(typeof aUndefined + "<br />");
+    document.write(aNull + "<br />");
+    document.write(typeof aNull + "<br />");
+    document.write(atrue + "<br />");
+    document.write(typeof atrue + "<br />");
+    document.write("<br />");
+    var temp1 = "abc";
+    var temp2 = "acb";
+    document.write(temp1 > temp2);
+    document.write("<br />");
+    var temp3 = abc;
+    if (temp1 === temp3) {
+        document.write(true);
+        document.write("<br />");
+    } else {
+        document.write(false);
+    }
+
+
+    var aNan = +"a123";
+    document.write(aNan + "<br />");
+    document.write("<br />");
+    document.write(typeof aNan);
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+    document.write("<br />");
+</script>
+<script>
+    window.onload = function (ev) {
+        var arrUrl = ['../img/21-161122135G1O2.gif', '21-161122135GK06.gif', '21-16112213564S26.gif', '21-161122135630O1.gif'],
+            arrText = "萌萌哒宠物", prev = document.getElementById('prev'), next = document.getElementById('next'),
+            text = document.getElementById('text'), span1 = document.getElementById('span1'),
+            img1 = document.getElementById('img1'), num = 0;
+
+        var myfun = function (){
+            img1.src = arrUrl[num];
+            span1.innerHTML = num + 1 + " / " + arrUrl.length;
+            text.innerHTML = arrText;
+        };
+
+        prev.onclick = function (ev1) {
+            num--;
+            if (num === -1) {
+                num = arrUrl.length - 1;
+            }
+            myfun();
+        }
+        text.onclick = function (ev1) {
+            num++;
+            if (num === arrUrl.length) {
+                num = 0;
+            }
+            myfun();
+        }
+    }
+</script>
+
+<img id="myimg" onclick="changeImg()" src="../img/21-161122135G1O2.gif" width="200" height="200">
+<p>点击图片更换图片</p>
+
+
+<script>
+    function myfun() {
+        document.getElementById("demo").innerHTML = "我的第一个demo函数";
+    }
+</script>
+<h1>我的页面</h1>
+<p id="demo">一个段落</p>
+<button type="button" onclick="myfun()">尝试一下</button>
+
+</body>
+</html>

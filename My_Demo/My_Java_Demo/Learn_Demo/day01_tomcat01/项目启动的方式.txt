@@ -1,0 +1,19 @@
+1，
+1，写好一个项目后，将html放在，D:\IDE\apache-tomcat-8.5.31\webapps下
+2，虚拟路径是文件夹的名称，下级目录是文件名称
+	http://127.0.0.1:8080/hello/hello.html
+3，可以将项目压缩成一个war包。、war包可以自动的解压缩。
+
+
+2，
+	1，在config目录下，修改server.xml的东西，在host标签下， 
+	<!--部署项目-->
+		<Context docBase="D:\IDE\hello" path="/hehe" />
+	2，http://127.0.0.1:8080/hehe/hello.html
+
+3，在D:\IDE\apache-tomcat-8.5.31\conf\Catalina\localhost
+	创建了一个任意名称的xml文件，添加内容
+	<Context docBase="D:\IDE\hello" />
+	
+	热部署，可以直接修改。不用重新启动服务器。
+	http://127.0.0.1:8080/bbb/hello.html

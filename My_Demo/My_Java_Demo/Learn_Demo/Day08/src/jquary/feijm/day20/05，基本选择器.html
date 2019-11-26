@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // <input type="button" value="改变 id 为 one 的元素背景色为 红色" id="b1" />
+            // 2，id选择器				：$("#id的属性值") 获得与指定id属性值匹配的元素
+            $("#b1").click(function () {
+                $("#one").css("backgroundColor", "pink");
+            });
+
+            // 1，标签选择器（元素选择器） ：$("html标签名") 获得所有匹配标签名称的元素
+            // <input type="button" value="改变元素名为 div 的所有元素的背景色 红色" id="b2" />
+            $("#b2").click(function () {
+                $("div").css("backgroundColor", "red");
+            });
+
+            // 3，类选择器				：$(".class的属性值") 获得与指定的class属性值匹配的元素
+            // <input type="button" value="改变 class 为 mini 的所有元素的背景色为红色" id="b3" />
+            $("#b3").click(function () {
+                $(".mini").css("backgroundColor", "black");
+            });
+
+            // <input type="button" value="改变所有的 span 元素和 id 为 two 的元素的背景为红色" id="b4" />
+            // $("#b4").click(function () {
+            //     $("span").css("backgroundColor", "green");
+            //     $("#two").css("backgroundColor", "green");
+            // })
+            $("#b4").click(function () {
+                $("span,#two").css("backgroundColor", "green");
+            })
+        });
+    </script>
+</head>
+<body>
+
+<input type="button" value="保存" class="mini" name="ok"/>
+
+<input type="button" value="改变 id 为 one 的元素背景色为 红色" id="b1"/>
+<input type="button" value="改变元素名为 div 的所有元素的背景色 红色" id="b2"/>
+<input type="button" value="改变 class 为 mini 的所有元素的背景色为红色" id="b3"/>
+<input type="button" value="改变所有的 span 元素和 id 为 two 的元素的背景为红色" id="b4"/>
+
+<h1>有一种奇迹叫坚持</h1>
+<h2>自信源于努力</h2>
+
+<div id="one"> id = one</div>
+<div id="onee"> id = onee</div>
+<div class="mini"> class = mini</div>
+<div class="mini2"> class = mini2</div>
+<p><span> span 131231 </span></p>
+<p><span> span 131231 </span></p>
+<p id="ooo"> id = oooo </p>
+<p id="two"> id = twoo </p>
+
+
+</body>
+</html>

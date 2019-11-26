@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            // $（"A[属性名]"）包含指定属性的选择器
+            // $（"A[属性名 = '值']"）包含指定属性等于指定值的选择器
+            // $（"A[属性名 = '值'][]..."）包含多个属性条件的选择器
+            // <input type="button" value=" 含有属性title 的div元素背景色为红色 " id="b1"/>
+            $("#b1").click(function () {
+                $("div[title]").css("backgroundColor", "pink");
+            });
+            // <input type="button" value=" 属性title值 等于test 的div元素背景色为红色 " id="b2"/>
+            $("#b2").click(function () {
+                $("div[title = 'test']").css("backgroundColor", "pink");
+            });
+            // <input type="button" value=" 属性title值 不等于test 的div元素背景色为红色(没有属性title的也将被选中)  " id="b3"/>
+            $("#b3").click(function () {
+                $("div[title != 'test']").css("backgroundColor", "pink");
+            });
+            // <input type="button" value=" 属性title值 以te开始 的div元素背景色为红色" id="b4"/>
+            $("#b4").click(function () {
+                $("div[title ^= 'te']").css("backgroundColor", "pink");
+            });
+            // <input type="button" value=" 属性title值 以est结束 的div元素背景色为红色 " id="b5"/>
+            $("#b5").click(function () {
+                $("div[title $= 'est']").css("backgroundColor", "pink");
+            });
+            // <input type="button" value=" 属性title值 含有es的 的div元素背景色为红色 " id="b6"/>
+            $("#b6").click(function () {
+                $("div[title *= 'es']").css("backgroundColor", "pink");
+            });
+            // <input type="button" value=" 选取有属性id的div元素，然后在结果中选取属性title值含有es 的div元素背景色为红色 " id="b7"/>
+            $("#b7").click(function () {
+                $("div[id][title *= 'es']").css("backgroundColor", "pink");
+            });
+        });
+    </script>
+
+</head>
+<body>
+<input type="button" value="保存" class="mini" name="ok"/>
+
+<input type="button" value=" 含有属性title 的div元素背景色为红色 " id="b1"/>
+<input type="button" value=" 属性title值 等于test 的div元素背景色为红色 " id="b2"/>
+<input type="button" value=" 属性title值 不等于test 的div元素背景色为红色(没有属性title的也将被选中)  " id="b3"/>
+<input type="button" value=" 属性title值 以te开始 的div元素背景色为红色" id="b4"/>
+<input type="button" value=" 属性title值 以est结束 的div元素背景色为红色 " id="b5"/>
+<input type="button" value=" 属性title值 含有es的 的div元素背景色为红色 " id="b6"/>
+<input type="button" value=" 选取有属性id的div元素，然后在结果中选取属性title值含有es 的div元素背景色为红色 " id="b7"/>
+
+<div title="eeee">title = eeee</div>
+<div title="test">title = test</div>
+<div title="eeee">title = eeee</div>
+<div title="testt">title = testt</div>
+<div title="ttest">title = ttest</div>
+<div id="ttest" title="ttest"> id=ttest title = ttest</div>
+
+
+</body>
+</html>

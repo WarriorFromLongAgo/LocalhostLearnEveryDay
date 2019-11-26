@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var message = "";
+
+    function messageFun() {
+
+        try {
+            addjhj();
+        } catch (e) {
+            message = "There was an error on this page.\n\n";
+            message += "Error description: " + e.message + "\n\n";
+            message += "Click OK to continue.\n\n";
+            alert(message);
+        }
+
+    }
+</script>
+<button onclick="messageFun()">显示错误</button>
+</body>
+</html>

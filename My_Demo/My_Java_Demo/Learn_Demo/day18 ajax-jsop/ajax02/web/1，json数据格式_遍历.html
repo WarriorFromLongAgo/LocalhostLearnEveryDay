@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+
+        // 1，定义基本的数据格式
+        var person = {"name": "张三", age: 23, 'sex': true};
+
+        var personArr2 = [
+            {"name": "张三", age: 23, 'sex': true},
+            {"name": "张三", age: 23, 'sex': true},
+            {"name": "张三", age: 23, 'sex': true}
+        ];
+
+        // for (var personKey in person) {
+        //     alert(personKey + person[personKey]);
+        // }
+
+
+        for (var i = 0; i < personArr2.length; i++) {
+            var personOne = personArr2[i];
+            for (var personOneKey in personOne) {
+                alert(personOneKey + personOne[personOneKey]);
+            }
+        }
+
+        // var pro = "{\"1\":{\"userName\":\"123456789\",\"passWord\":\"123456789\"},\"2\":{\"userName\":null,\"passWord\":null}};"
+        var pro = {1: {userName: 123456, passWord: 123456}, 2: {userName: 123456789, passWord: 123456789}};
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

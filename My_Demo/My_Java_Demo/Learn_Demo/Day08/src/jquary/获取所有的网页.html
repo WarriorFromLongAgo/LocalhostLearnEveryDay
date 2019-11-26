@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="feijm/js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+
+            $("input#get").click(function () {
+                // localhost:63342
+                // let host = window.location.host;
+                // alert(host);
+
+                // http://localhost:63342/Day08/jquary/%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E7%9A%84%E7%BD%91%E9%A1%B5.html?_ijt=vh0o6rm3nmtmkfjolgtsk9vo4i
+                // let href = window.location.href;
+                // alert(href);
+
+                // http://localhost:63342/Day08/jquary/%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E7%9A%84%E7%BD%91%E9%A1%B5.html?_ijt=db44evjk9logr0kthif59m1ckp
+                // let href = document.location.href;
+                // alert(href)
+
+                // 0
+                // let length = window.length;
+                // alert(length)
+
+                // 0
+                // let length = frames.length;
+                // alert(length)
+                console.log(2)
+                let parent = window.parent;
+                alert(parent.location.href)
+               /* for (i = 0; i < window.frames.length; i++) {
+                    console.log(i)
+                    alert(window.frames[i].location.href)
+                }*/
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+
+<input type="button" id="get" value="获取所有的网页网址">
+
+
+</body>
+</html>

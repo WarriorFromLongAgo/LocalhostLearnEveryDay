@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img src="img/01.gif" id="01" />
+<img src="img/off.gif" id="off" onclick="fun();" />
+
+<script>
+    var elementById = document.getElementById("01");
+    elementById.onclick = function (ev) {
+        alert("点击了图片1");
+    };
+
+    function fun() {
+        alert("点击了图片2");
+    }
+
+</script>
+
+</body>
+</html>

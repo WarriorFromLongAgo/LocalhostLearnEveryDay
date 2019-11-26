@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--导入application的子配置-->
+    <import resource="classpath:applicationContext_DataSource.xml"/>
+
+    <!--配置包扫描的路径，不扫描springmvc的配置-->
+    <context:component-scan base-package="com.fff">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!--1，配置德鲁伊的连接池-->
+    <!--2，配置sqlsessionfactory的对象-->
+    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--3，创建mapper代理对象-->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.fff.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"/>
+    </bean>
+
+    <!--spring 基于XML 的声明式事务配置-->
+    <!--1，配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--
+        2，配置事务的通知，也是事务的拦截器
+        id是事务通知的唯一标识    transaction-manager是给事务通知提供一个事务管理器的引用
+    -->
+    <tx:advice id="transactionInterceptor" transaction-manager="transactionManager">
+        <!--5，配置事务的属性-->
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED" isolation="DEFAULT" read-only="false"/>
+            <tx:method name="find*" propagation="SUPPORTS" isolation="DEFAULT" read-only="true"/>
+            <!--propagation     事务传播行为 默认 REQUIRED 表示一定会有事务 增删改选择默认就可以 查询选择SUPPORTS -->
+            <!--isolation       事务隔离级别 默认 DEFAULT 表示使用数据库的默认隔离级别-->
+            <!--timeout         事务超时的时间 默认 -1 表示永不超时，以秒为单位 -->
+            <!--read-only       事务是否只读 默认 false，查询方法设置为true 只读，-->
+            <!--rollback-for    将被触发进行回滚的 Exception(s) 当产生对应异常的时候，事务回滚，产生其他异常的时候
+                                事务不回滚。。。。没有默认值的话就是所有的异常全部回滚
+            -->
+            <!--no-rollback-for 不被触发进行回滚的 Exception(s)
+                                指定一个异常吗，当产生这个异常的时候，事务不回滚，产生其他异常时，事务回滚
+                                没有默认值的话，任何异常都可以回滚
+            -->
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <!--3，配置AOP，配置切入点表达式-->
+        <aop:pointcut id="porintcut" expression="execution(* com.fff.service..*(..))"/>
+        <!--4，配置事务的拦截器-->
+        <aop:advisor advice-ref="transactionInterceptor" pointcut-ref="porintcut"/>
+    </aop:config>
+
+</beans>

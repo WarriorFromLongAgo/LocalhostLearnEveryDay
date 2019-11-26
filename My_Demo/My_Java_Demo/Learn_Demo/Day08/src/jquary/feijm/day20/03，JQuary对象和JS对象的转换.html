@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuary对象和JS对象的转换</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+</head>
+<body>
+
+
+<div id="div1">div1..........</div>
+<div id="div2">div2..........</div>
+
+<script>
+    // 1，通过js方式来获取名称叫做div的所有的html对象
+    var divArr = document.getElementsByTagName("div");
+    alert(divArr.length);
+    // [object HTMLCollection]  可以当做数组使用
+    for (var i = 0; i < divArr.length; i++) {
+        divArr[i].innerHTML = "aaa";
+    }
+
+    // 2，通过JQuary的方式来获取名称叫做div的所有的html对象
+    var $div = $("div");
+    alert($div);
+    // [object Object]  可以当做数组使用
+    $div.html("bbb");
+
+    /*
+    * 1，JQuary对象在操作时，更加方便
+    * 2，JQuary对象和JS对象方法时不通用的
+    * 3，两者相互转换
+    * jq------>js：jq对象[索引] 或者 jq对象.get(索引)
+    * js------>jq：$(js对象)
+    * */
+    $div[0].innerHTML = "ddd";
+    $div.get(1).innerHTML = "eee";
+
+    for (var i = 0; i < divArr.length; i++) {
+        // js对象转换为jq
+        // divArr[i].innerHTML = "aaa";
+        $(divArr[i]).html("ccc");
+    }
+
+</script>
+
+</body>
+</html>

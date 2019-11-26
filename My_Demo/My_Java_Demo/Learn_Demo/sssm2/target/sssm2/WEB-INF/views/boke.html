@@ -1,0 +1,2602 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>boke</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <!--<meta http-equiv="Cache-Control" content="no-transform">-->
+    <!--<meta http-equiv="Cache-Control" content="no-siteapp">-->
+
+    <link rel="stylesheet" href="../../css/Blog/blog-common.min.css">
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet"
+          href="../../css/Blog/bundle-SimpleMemory-mobile.min.css">
+    <link type="text/css" rel="stylesheet" href="../../css/Blog/custom.css">
+    <link type="text/css" rel="stylesheet" href="../../css/Blog/font_543384_ezv3l7gd9r7.css">
+    <link type="text/css" rel="stylesheet" href="../../css/Blog/footer.min.css">
+    <link type="text/css" rel="stylesheet" href="../../css/Blog/menu_bubble.min.css">
+    <link type="text/css" rel="stylesheet" href="../../css/Blog/optiscroll.min.css">
+
+
+    <script async="" src="../../js/Blog/analytics.js"></script>
+
+    <!--
+         音乐播放器
+         require APlayer
+        <link rel="stylesheet" href="./BNDong - 博客园_files/APlayer.min.css">
+        <script src="./BNDong - 博客园_files/APlayer.min.js"></script>
+         require MetingJS
+        <script src="./BNDong - 博客园_files/Meting.min.js"></script>
+    -->
+
+
+    <script src="../../js/Blog/APlayer.min.js"></script>
+
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="base"
+            src="../../js/Blog/base.min.js"></script>
+    <script src="../../js/Blog/blog-common.min.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="circleMagic"
+            src="../../js/Blog/circleMagic.min.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="classie"
+            src="../../js/Blog/classie.min.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
+            data-requiremodule="src/script/css.min" src="../../js/Blog/css.min.js"></script>
+    <script src="../../js/Blog/jquery.mousewheel.min.js"></script>
+    <script src="../../js/Blog/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main4"
+            src="../../js/Blog/main4.min.js"></script>
+    <script src="../../js/Blog/Meting.min.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
+            data-requiremodule="optiscroll_ToProgress_rotate"
+            src="../../js/Blog/optiscroll_ToProgress_rotate.min.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="RibbonsEffect"
+            src="../../js/Blog/RibbonsEffect.min.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="snapSvg"
+            src="../../js/Blog/snap.svg-min.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="tools"
+            src="../../js/Blog/tools.min.js"></script>
+
+
+</head>
+<body style="overflow: auto;">
+<div id="pageAnimationOffOn" data="off" style="z-index:  999;position:  absolute;top: 15px;right: 20px;
+                                        font-size: 14px;color: #f9f9f9;cursor: pointer;">
+    <span id="pageAnimationOffOnIcon" class="iconfont icon-shandian" style="display: inline-block;"></span>
+    <span id="pageAnimationOffOnText">关闭页面特效</span>
+</div>
+<a name="top" style="display: none;"></a>
+
+<!--done-->
+<div id="home" style="margin-top: 181px;">
+    <div id="header">
+        <div id="blogTitle">
+            <a id="lnkBlogLogo" href="https://www.cnblogs.com/bndong/">
+                <img id="blogLogo" src="../../image/Blog/logo.gif" alt="返回主页"></a>
+
+            <!--done-->
+            <h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle"
+                   href="https://www.cnblogs.com/bndong/">BNDong</a>
+            </h1>
+            <h2>
+
+            </h2>
+
+
+        </div><!--end: blogTitle 博客的标题和副标题 -->
+        <div id="navigator">
+
+            <ul id="navList">
+                <li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+                    博客园</a>
+                </li>
+                <li>
+                    <a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/bndong/">
+                        首页</a>
+                </li>
+                <li>
+
+                    <a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+                        新随笔</a>
+                </li>
+                <li>
+                    <a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/BNDong">
+                        联系</a></li>
+                <li>
+                    <a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/bndong/rss/">
+                        订阅</a>
+                    <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+                <li>
+                    <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+                        管理</a>
+                </li>
+            </ul>
+
+
+            <div class="blogStats">
+
+			<span id="stats_post_count">随笔 -
+27&nbsp; </span>
+                <span id="stats_article_count">文章 -
+4&nbsp; </span>
+                <span id="stats-comment_count">评论 -
+17</span>
+
+
+            </div><!--end: blogStats -->
+        </div><!--end: navigator 博客导航栏 -->
+    </div><!--end: header 头部 -->
+
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+
+                <!--done-->
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2019/01/21.html">2019年1月21日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/10300036.html">
+                            [置顶] 书单
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：读书使人得到一种优雅和风味，这就是读书的整个目的，而只有抱着这种目的的读书才可以叫做艺术。一人读书的目的并不是要“改进心智”，因为当他开始想要改进心智的时候，一切读书的乐趣便丧失净尽了。
+                            <a href="https://www.cnblogs.com/bndong/p/10300036.html"
+                               class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2019-01-21 18:27 BNDong 阅读 (919) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=10300036" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2018/06/04.html">2018年6月4日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/9132439.html">
+                            [置顶] 关于本博客皮肤样式
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：很多人私信求博皮，索性就重构了代码，分享了出来。代码托管至GitHub上，方便大家使用和修改。 <a
+                                href="https://www.cnblogs.com/bndong/p/9132439.html"
+                                class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2018-06-04 14:19 BNDong 阅读 (6702) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=9132439" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2019/10/30.html">2019年10月30日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/11763377.html">
+                            V2Raｙ+WebSocket+TLS+Nginx+SSL 配置及使用
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：v2raｙ 是一个模块化的代理工具，支持 VMess，Socks，HTTP，Shadowsocks 等等协议，并且附带很多高级功能，HTTP，TLS 等等。 <a
+                                href="https://www.cnblogs.com/bndong/p/11763377.html"
+                                class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2019-10-30 14:08 BNDong 阅读 (175) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=11763377" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2019/01/16.html">2019年1月16日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/10275430.html">
+                            Spring Cloud：Security OAuth2 自定义异常响应
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：对于客户端开发或者网站开发而言，调用接口返回有统一的响应体，可以针对性的设计界面，代码结构更加清晰，层次也更加分明。 <a
+                                href="https://www.cnblogs.com/bndong/p/10275430.html"
+                                class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2019-01-16 10:12 BNDong 阅读 (3257) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=10275430" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2018/12/18.html">2018年12月18日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/10135370.html">
+                            Spring Cloud：统一异常处理
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：在启动应用时会发现在控制台打印的日志中出现了两个路径为&nbsp;{[/error]}&nbsp;的访问地址，当系统中发送异常错误时，Spring Boot
+                            会根据请求方式分别跳转到以 JSON 格式或以界面显示的 /error 地址中显示错误信息。 默认异常处理 使用 AJAX 方式请求时返回的 JSON 格式错误信 <a
+                                href="https://www.cnblogs.com/bndong/p/10135370.html"
+                                class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2018-12-18 11:47 BNDong 阅读 (3892) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=10135370" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2018/11/29.html">2018年11月29日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/10037197.html">
+                            Spring Cloud：多环境配置、eureka 安全认证、容器宿主机IP注册
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：Spring 版本 Spring Boot：2.0.6.RELEASE Spring Cloud：Finchley.SR2 多环境配置切换 使用 Spring Cloud 来处理
+                            多配置的切换在开发中真是很常用，能有效提高效率。一些成熟的框架基本都有关于配置切换的解决方案，当然了 Spring Cl <a
+                                href="https://www.cnblogs.com/bndong/p/10037197.html"
+                                class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2018-11-29 12:11 BNDong 阅读 (1512) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=10037197" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2018/11/13.html">2018年11月13日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/9947729.html">
+                            Hexo + GitEE 搭建、备份、恢复、多终端
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：Hexo 是使用的比较多的博客框架了，我也尝试自己搭一下，做一些基础功能的测试。之所以没有使用 GitHub 而选择了码云，一是我有自己的 VPS 不需要使用&nbsp;GitHub
+                            Pages ，所以本文也没有关于如何使用 GitHub Pages 的教程；二是 GitHub 上私有仓库是收费的，码云上面能 <a
+                                href="https://www.cnblogs.com/bndong/p/9947729.html"
+                                class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2018-11-13 12:14 BNDong 阅读 (1119) 评论 (1)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=9947729" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2018/11/06.html">2018年11月6日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/9916453.html">
+                            Vultr CentOS 7 安装 Docker
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：前言 最近在梳理公司的架构，想用 VPS 先做一些测试，然后就开始踩坑了！我用 Vultr 新买了个 VPS。 安装的 CentOS 版本： 安装 先安装
+                            Nginx，图方便，用了个自动脚本： 安装 Nginx 成功，重启服务器，连接 SSH。 再安装 Docker： 一顿操作下来，执行顺利，无任何 <a
+                                href="https://www.cnblogs.com/bndong/p/9916453.html"
+                                class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2018-11-06 17:29 BNDong 阅读 (808) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=9916453" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2018/10/23.html">2018年10月23日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/9809656.html">
+                            Spring：AOP面向切面编程
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：AOP主要实现的目的是针对业务处理过程中的切面进行提取，它所面对的是处理过程中的某个步骤或阶段，以获得逻辑过程中各部分之间低耦合性的隔离效果。
+                            AOP是软件开发思想阶段性的产物，我们比较熟悉面向过程OPP和面向对象OOP，AOP是OOP的延续，但不是OOP的替代，而是作为OOP的有益补充。 <a
+                                href="https://www.cnblogs.com/bndong/p/9809656.html"
+                                class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2018-10-23 15:03 BNDong 阅读 (391) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=9809656" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2018/10/12.html">2018年10月12日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/9762067.html">
+                            Maven基础入门与核心知识
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：Maven是一个项目管理和综合工具。Maven提供了开发人员构建一个完整的生命周期框架。开发团队可以自动完成项目的基础工具建设，Maven使用标准的目录结构和默认构建生命周期。
+                            <a href="https://www.cnblogs.com/bndong/p/9762067.html" class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2018-10-12 16:09 BNDong 阅读 (1219) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=9762067" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2018/08/21.html">2018年8月21日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/9504490.html">
+                            数据去中心化的场景与流程
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：在云计算、大数据等新技术的带动下，越来越多的企业需要对结构化的数据进行查询、分析、处理和更新。同时，随着创新业务的不断增加，业务的复杂及庞大的体量必然会产生错综复杂且规模巨大的结构化数据，这些都必然迫使企业对数据库的需求指向大规模、高可靠、高扩展及高性能。
+                            什么是数据去中心化 数据去中心化过程也就是 <a href="https://www.cnblogs.com/bndong/p/9504490.html"
+                                                     class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2018-08-21 10:48 BNDong 阅读 (1573) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=9504490" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/bndong/archive/2018/08/10.html">2018年8月10日</a>
+                    </div>
+
+                    <div class="postTitle">
+
+
+                        <a class="postTitle2" href="https://www.cnblogs.com/bndong/p/9448051.html">
+                            设计模式：灵活编程（观察者模式）
+                        </a>
+
+                    </div>
+                    <div class="postCon">
+
+                        <div class="c_b_p_desc">
+                            摘要：定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，有可能导致其它依赖对象的修改更新，那么开发任务会很快变成一个产生bug和消除bug的恶性循环。当我们创建一个对象的时候，一个对象的创建应当尽可能减少和其它对象间的耦合！一个对象的改变尽可能的不会引起代码库其它地方的修改。使用观察者模式能有
+                            <a href="https://www.cnblogs.com/bndong/p/9448051.html" class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="postDesc">
+
+                        posted @ 2018-08-10 15:02 BNDong 阅读 (505) 评论 (0)
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=9448051" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="topicListFooter">
+                    <div id="nav_next_page">
+
+                        <a href="https://www.cnblogs.com/bndong/default.html?page=2">
+                            下一页
+                        </a>
+
+                    </div>
+                </div>
+
+
+            </div><!--end: forFlow -->
+        </div><!--end: mainContent 主体内容容器-->
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+
+                <div id="sidebar_news" class="newsItem"><!--done-->
+                    <h3 class="catListTitle">公告</h3>
+
+                    <div id="blog-news">
+                        <div class="container">
+                            <div class="menu-wrap optiscroll is-enabled" id="menuWrap" style="display:none">
+                                <div class=" optiscroll-content" style="right: -17px; bottom: -17px;">
+                                    <nav class="menu">            <!-- 个人简介 -->
+                                        <div class="introduce-box"
+                                             style="background: url(&quot;https://bndong.github.io/images/menu_bg.gif&quot;) center center / 100% no-repeat rgb(0, 0, 0);">
+                                            <div class="introduce-head">
+                                                <div class="introduce-via" id="menuBlogAvatar">
+                                                    <img src="../../image/Blog/20161119225202.png">
+                                                </div>
+                                            </div>
+                                            <div id="introduce">
+                                                昵称：
+                                                <a href="https://home.cnblogs.com/u/bndong/">
+                                                    BNDong
+                                                </a>
+                                                <br>
+                                                园龄：
+                                                <a href="https://home.cnblogs.com/u/bndong/" title="入园时间：2016-11-17">
+                                                    2年11个月
+                                                </a>
+                                                <br>
+                                                粉丝：
+                                                <a href="https://home.cnblogs.com/u/bndong/followers/">
+                                                    348
+                                                </a>
+                                                <br>
+                                                关注：
+                                                <a href="https://home.cnblogs.com/u/bndong/followees/">
+                                                    8
+                                                </a>
+                                                <div id="p_b_follow">
+                                                    <a href="javascript:void(0)"
+                                                       onclick="follow(&#39;61118ff5-a5ac-e611-845c-ac853d9f53ac&#39;)">+加关注</a>
+                                                </div>
+
+                                            </div>
+                                        </div>            <!-- 导航 -->
+                                        <div class="nav-title"></div>
+                                        <div class="icon-list">
+                                            <ul id="m-nav-list">
+                                                <li><a href="https://www.cnblogs.com/bndong/" target="_self">首页</a></li>
+                                                <li><a href="https://msg.cnblogs.com/send/bndong" target="_blank">联系</a>
+                                                </li>
+                                                <li><a href="https://www.cnblogs.com/bndong/rss" target="_blank">订阅</a>
+                                                </li>
+                                                <li><a href="https://i.cnblogs.com/" target="_blank">管理</a></li>
+                                                <li><a href="https://github.com/BNDong" target="_blank">GitHub</a></li>
+                                                <li><a href="https://www.cnblogs.com/" target="_blank">Cnblogs</a></li>
+                                            </ul>
+                                        </div>            <!-- 日历 --> <span id="calendar-box"></span>
+                                        <!-- 找找看 -->
+                                        <div class="m-list-title" style="display: block;"><span>找找看</span></div>
+                                        <div class="m-icon-list" id="sb-sidebarSearchBox">
+                                            <div id="sb_widget_my_zzk" class="div_my_zzk"><input id="q" type="text"
+                                                                                                 onkeydown="return zzk_go_enter(event);"
+                                                                                                 class="input_my_zzk">
+                                            </div>
+                                        </div>            <!-- 积分与排名 -->
+                                        <div class="m-list-title" style="display: block;"><span>积分排名</span></div>
+                                        <div class="m-icon-list" id="sb-sidebarScorerank">
+                                            <div>
+                                                <ul>
+                                                    <li><a href="javascript:void(0);"><span
+                                                            class="iconfont icon-collection_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>积分
+                                                        -
+                                                        53525</a></li>
+                                                    <li><a href="javascript:void(0);"><span
+                                                            class="iconfont icon-collection_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>排名
+                                                        -
+                                                        12468</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>            <!-- 最新随笔 -->
+                                        <div class="m-list-title" style="display: block;"><span>最新随笔</span></div>
+                                        <div class="m-icon-list" id="sb-sidebarRecentposts">
+                                            <div>
+                                                <ul>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/11763377.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>V2Raｙ+WebSocket+TLS+Nginx+SSL
+                                                        配置及使用</a></li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/10275430.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Spring
+                                                        Cloud：Security OAuth2 自定义异常响应</a></li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/10135370.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Spring
+                                                        Cloud：统一异常处理</a></li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/10037197.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Spring
+                                                        Cloud：多环境配置、eureka 安全认证、容器宿主机IP注册</a></li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/9947729.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Hexo
+                                                        + GitEE 搭建、备份、恢复、多终端</a></li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/9916453.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Vultr
+                                                        CentOS 7 安装 Docker</a></li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/9809656.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Spring：AOP面向切面编程</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/9762067.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Maven基础入门与核心知识</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/9504490.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>数据去中心化的场景与流程</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/9448051.html"><span
+                                                            class="iconfont icon-time_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>设计模式：灵活编程（观察者模式）</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>            <!-- 我的标签 -->
+                                        <div class="m-list-title" style="display: block;"><span>我的标签</span></div>
+                                        <div class="m-icon-list" id="sb-toptags">
+                                            <div>
+                                                <ul>
+                                                    <li><a href="https://www.cnblogs.com/bndong/tag/PHP/"><span
+                                                            class="iconfont icon-label_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>PHP(10)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/tag/java/"><span
+                                                            class="iconfont icon-label_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>java(5)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.cnblogs.com/bndong/tag/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81/"><span
+                                                                class="iconfont icon-label_fill"
+                                                                style="color: #888;font-size: 14px;margin-right: 5px;"></span>代码整洁(4)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.cnblogs.com/bndong/tag/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span
+                                                                class="iconfont icon-label_fill"
+                                                                style="color: #888;font-size: 14px;margin-right: 5px;"></span>读书笔记(4)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.cnblogs.com/bndong/tag/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><span
+                                                                class="iconfont icon-label_fill"
+                                                                style="color: #888;font-size: 14px;margin-right: 5px;"></span>设计模式(4)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.cnblogs.com/bndong/tag/%E6%9E%B6%E6%9E%84/"><span
+                                                                class="iconfont icon-label_fill"
+                                                                style="color: #888;font-size: 14px;margin-right: 5px;"></span>架构(2)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://www.cnblogs.com/bndong/tag/%E6%A1%86%E6%9E%B6/"><span
+                                                                class="iconfont icon-label_fill"
+                                                                style="color: #888;font-size: 14px;margin-right: 5px;"></span>框架(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/tag/maven/"><span
+                                                            class="iconfont icon-label_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>maven(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/tag/Norm/"><span
+                                                            class="iconfont icon-label_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Norm(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/tag/redis/"><span
+                                                            class="iconfont icon-label_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>redis(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/tag/"><span
+                                                            class="iconfont icon-label_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>更多</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>            <!-- 随笔分类 -->
+                                        <div class="m-list-title" style="display: block;"><span>随笔分类</span></div>
+                                        <div class="m-icon-list" id="sb-classify">
+                                            <div>
+                                                <ul>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/984677.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>ALi(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/919897.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>API(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/1241796.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>Architecture(3)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/1167570.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>DesignMode(4)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/1315535.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>Java(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/983290.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>JavaScript(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/911730.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>jQuery</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/1216200.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>Laravel(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/918406.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>Logger(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/910727.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>PHP(6)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/1315536.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>Spring(4)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/974397.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>UnitTesting(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/category/928768.html"
+                                                           rel="" target=""><span class="iconfont icon-marketing_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>WeChat(1)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>            <!-- 随笔档案 -->
+                                        <div class="m-list-title" style="display: block;"><span>随笔档案</span></div>
+                                        <div class="m-icon-list" id="sb-record">
+                                            <div>
+                                                <ul>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2019/10.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2019年10月(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2019/01.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2019年1月(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2018/12.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2018年12月(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2018/11.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2018年11月(3)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2018/10.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2018年10月(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2018/08.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2018年8月(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2018/06.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2018年6月(3)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2018/05.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2018年5月(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2018/03.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2018年3月(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2018/01.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2018年1月(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2017/10.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2017年10月(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2017/05.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2017年5月(1)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2017/04.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2017年4月(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2017/03.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2017年3月(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2016/12.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2016年12月(2)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archive/2016/11.html"
+                                                           rel="" target=""><span class="iconfont icon-task_fill"
+                                                                                  style="color: #888;font-size: 14px;margin-right: 5px;"></span>2016年11月(1)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>            <!-- 文章档案 -->
+                                        <div class="m-list-title" style="display: block;"><span>文章档案</span></div>
+                                        <div class="m-icon-list" id="sb-articlearchive">
+                                            <div>
+                                                <ul>
+                                                    <li><a href="https://www.cnblogs.com/bndong/archives/2017/06.html"
+                                                           rel="nofollow noopener noreferrer" target=""><span
+                                                            class="iconfont icon-document_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>2017年6月(4)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>            <!-- 阅读排行 -->
+                                        <div class="m-list-title" style="display: block;"><span>阅读排行</span></div>
+                                        <div class="m-icon-list" id="sb-topview">
+                                            <div>
+                                                <ul>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/6139598.html"><span
+                                                            class="iconfont icon-browse_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>API
+                                                        接口规范(18366)</a></li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/9035848.html"><span
+                                                            class="iconfont icon-browse_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Laravel5：重定向
+                                                        redirect 函数的详细使用(16698)</a></li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/6222266.html"><span
+                                                            class="iconfont icon-browse_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>微信开发_网页授权获取用户的基本信息(16658)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/9132439.html"><span
+                                                            class="iconfont icon-browse_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>关于本博客皮肤样式(6702)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/6860949.html"><span
+                                                            class="iconfont icon-browse_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>支付宝即时到账DEMO配置与使用(5826)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>            <!-- 推荐排行 -->
+                                        <div class="m-list-title" style="display: block;"><span>推荐排行</span></div>
+                                        <div class="m-icon-list" id="sb-topDiggPosts">
+                                            <div>
+                                                <ul>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/9132439.html"><span
+                                                            class="iconfont icon-like_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>关于本博客皮肤样式(189)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/10300036.html"><span
+                                                            class="iconfont icon-like_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>书单(14)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/6139598.html"><span
+                                                            class="iconfont icon-like_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>API
+                                                        接口规范(10)</a></li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/7988365.html"><span
+                                                            class="iconfont icon-like_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>详解PHP反射API(6)</a>
+                                                    </li>
+                                                    <li><a href="https://www.cnblogs.com/bndong/p/10135370.html"><span
+                                                            class="iconfont icon-like_fill"
+                                                            style="color: #888;font-size: 14px;margin-right: 5px;"></span>Spring
+                                                        Cloud：统一异常处理(5)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>            <!-- 自定义列表 --> <span id="menuCustomList"></span></nav>
+                                    <button class="close-button" id="close-button">Close Menu</button>
+                                    <div class="morph-shape" id="morph-shape"
+                                         data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                                             viewBox="0 0 100 800" preserveAspectRatio="none">
+                                            <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"></path>
+                                            <desc>Created with Snap</desc>
+                                            <defs></defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="optiscroll-v"><b class="optiscroll-vtrack"></b></div>
+                                <div class="optiscroll-h"><b class="optiscroll-htrack"></b></div>
+                            </div>
+                            <button class="menu-button menu-button-scroll" id="open-button"></button>
+                            <div class="content-wrap" id="content-wrap"></div><!-- /content-wrap --></div>
+                        <div class="main-header"
+                             style="background: url(&quot;https://w.wallhaven.cc/full/k9/wallhaven-k9p8l6.jpg&quot;) center center / cover no-repeat rgb(34, 34, 34); overflow: hidden;">
+                            <canvas id="notHomeTopCanvas"></canvas>
+                            <div class="vertical">
+                                <div class="main-header-content inner">
+                                    <!--<link href="./BNDong - 博客园_files/css" rel="stylesheet">-->
+                                    <h1 class="page-title" style="font-family: &#39;Playball&#39;, cursive;" id="homeTopTitle">BNDong</h1>
+                                    <h2 class="page-description" id="hitokoto" style="display: -webkit-box;">
+                                        日暮秋风起，萧萧枫树林。</h2>
+                                    <h3 class="page-author" id="hitokotoAuthor" style="display: block;">《过三闾庙》 - 唐代 -
+                                        戴叔伦</h3>
+                                    <h1 class="sb-title" id="sbTitle"></h1>
+                                    <p class="article-info" id="articleInfo"></p></div>
+                            </div>
+                            <a class="scroll-down" href="javascript:void(0);" data-offset="-45"> <span class="hidden">Scroll Down</span>
+                                <i class="scroll-down-icon iconfont icon-fanhui"></i> </a>
+                            <canvas id="homeTopCanvas" width="1349" height="181"
+                                    style="position: absolute; left: 0px; bottom: 0px;"></canvas>
+                        </div>
+                        <div id="loading" style="display: none;"></div>
+                        <div id="bottomProgressBar">
+                            <div id="top-progress-bar"
+                                 style="position: relative; top: 0px; left: 0px; right: 0px; background-color: rgb(119, 182, 255); height: 2px; width: 5%; transition: width 0.2s ease 0s, opacity 0.6s ease 0s; opacity: 1;"></div>
+                        </div>
+                        <div id="rightMenu">
+                            <div id="attention" clickflg="true"><span class="rightMenuSpan attentionSpan">已关注</span><i
+                                    class="iconfont icon-dianzan1"></i></div>
+                            <div id="toUpDown" data="up"><span class="rightMenuSpan toUpDownSpan">返回顶部</span>
+                                <div id="toUpDownI" style="transform: rotate(0deg); transform-origin: 50% 50%;"><i
+                                        class="iconfont icon-zhiding"></i></div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">window['__document_write_ajax_callbacks__']['4']();</script>
+                        <script type="text/javascript">window['__document_write_ajax_callbacks__']['1']();</script>
+                        <script type="text/javascript">window['__document_write_ajax_callbacks__']['5']();</script>
+                        <script type="text/javascript">window['__document_write_ajax_callbacks__']['6']();</script>
+                        <script>window['__document_write_ajax_callbacks__']['2']();</script>
+                        <div id="profile_block">
+                            昵称：
+                            <a href="https://home.cnblogs.com/u/bndong/">
+                                BNDong
+                            </a>
+                            <br>
+                            园龄：
+                            <a href="https://home.cnblogs.com/u/bndong/" title="入园时间：2016-11-17">
+                                2年11个月
+                            </a>
+                            <br>
+                            粉丝：
+                            <a href="https://home.cnblogs.com/u/bndong/followers/">
+                                348
+                            </a>
+                            <br>
+                            关注：
+                            <a href="https://home.cnblogs.com/u/bndong/followees/">
+                                8
+                            </a>
+                            <div id="p_b_follow"></div>
+                            <script type="text/javascript">window['__document_write_ajax_callbacks__']['7']();</script>
+                            <script>window['__document_write_ajax_callbacks__']['3']();</script>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="blog-calendar" style="">
+
+                    <table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+                        <tbody>
+                        <tr>
+                            <td colspan="7">
+                                <table class="CalTitle" cellspacing="0" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td class="CalNextPrev">
+                                            <a href="javascript:void(0);"
+                                               onclick="loadBlogCalendar(&#39;2019/10/04&#39;); return false;">&lt;</a>
+                                        </td>
+                                        <td align="center">2019年11月</td>
+                                        <td align="right" class="CalNextPrev">
+                                            <a href="javascript:void(0);"
+                                               onclick="loadBlogCalendar(&#39;2019/12/04&#39;); return false;">&gt;</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+                            <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+                            <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+                            <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+                            <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+                            <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+                            <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+                        </tr>
+                        <tr>
+                            <td class="CalOtherMonthDay" align="center">27</td>
+                            <td class="CalOtherMonthDay" align="center">28</td>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                            <td class="CalOtherMonthDay" align="center">31</td>
+                            <td class="" align="center">
+                                1
+                            </td>
+                            <td class="CalWeekendDay" align="center">
+                                2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CalWeekendDay" align="center">
+                                3
+                            </td>
+                            <td class="CalTodayDay" align="center">
+                                4
+                            </td>
+                            <td class="" align="center">
+                                5
+                            </td>
+                            <td class="" align="center">
+                                6
+                            </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                            <td class="CalWeekendDay" align="center">
+                                9
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CalWeekendDay" align="center">
+                                10
+                            </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                            <td class="" align="center">
+                                13
+                            </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                            <td class="CalWeekendDay" align="center">
+                                16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CalWeekendDay" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                            <td class="CalWeekendDay" align="center">
+                                23
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CalWeekendDay" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                            <td class="CalWeekendDay" align="center">
+                                30
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                7
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <script>loadBlogDefaultCalendar();</script>
+
+                <div id="leftcontentcontainer">
+                    <div id="blog-sidecolumn">
+                        <!-- 搜索 -->
+                        <div id="sidebar_search" class="sidebar-block">
+                            <div id="sidebar_search" class="mySearch">
+                                <h3 class="catListTitle">搜索</h3>
+                                <div id="sidebar_search_box">
+                                    <div id="widget_my_zzk" class="div_my_zzk">
+                                        <input type="text" id="q" onkeydown="return zzk_go_enter(event);"
+                                               class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button"
+                                                                                 value="找找看" id="btnZzk"
+                                                                                 class="btn_my_zzk">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 常用链接 -->
+                        <div id="sidebar_shortcut" class="sidebar-block">
+                            <div class="catListLink">
+                                <h3 class="catListTitle">
+                                    常用链接
+                                </h3>
+                                <ul>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/p/" title="我的博客的随笔列表">我的随笔</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/MyComments.html"
+                                           title="我的发表过的评论列表">我的评论</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/OtherPosts.html"
+                                           title="我评论过的随笔列表">我的参与</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/RecentComments.html" title="我的博客的评论列表">最新评论</a>
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/tag/" title="我的博客的标签列表">我的标签</a>
+                                    </li>
+
+                                </ul>
+                                <div id="itemListLin_con" style="display:none;">
+                                    <ul>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- 最新随笔 -->
+                        <div id="sidebar_recentposts" class="sidebar-block">
+                            <div class="catListEssay">
+                                <h3 class="catListTitle">最新随笔</h3>
+                                <ul>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/11763377.html">1.V2Raｙ+WebSocket+TLS+Nginx+SSL
+                                            配置及使用</a>
+
+                                    </li>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/10275430.html">2.Spring Cloud：Security
+                                            OAuth2 自定义异常响应</a>
+
+                                    </li>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/10135370.html">3.Spring
+                                            Cloud：统一异常处理</a>
+
+                                    </li>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/10037197.html">4.Spring
+                                            Cloud：多环境配置、eureka 安全认证、容器宿主机IP注册</a>
+
+                                    </li>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/9947729.html">5.Hexo + GitEE
+                                            搭建、备份、恢复、多终端</a>
+
+                                    </li>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/9916453.html">6.Vultr CentOS 7 安装
+                                            Docker</a>
+
+                                    </li>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/9809656.html">7.Spring：AOP面向切面编程</a>
+
+                                    </li>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/9762067.html">8.Maven基础入门与核心知识</a>
+
+                                    </li>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/9504490.html">9.数据去中心化的场景与流程</a>
+
+                                    </li>
+                                    <li>
+
+
+                                        <a href="https://www.cnblogs.com/bndong/p/9448051.html">10.设计模式：灵活编程（观察者模式）</a>
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- 我的标签 -->
+                        <div id="sidebar_toptags" class="sidebar-block">
+                            <div class="catListTag">
+                                <h3 class="catListTitle">我的标签</h3>
+                                <ul>
+
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/PHP/">PHP</a>(10)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/java/">java</a>(5)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81/">代码整洁</a>(4)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>(4)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>(4)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/%E6%9E%B6%E6%9E%84/">架构</a>(2)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/%E6%A1%86%E6%9E%B6/">框架</a>(2)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/maven/">maven</a>(2)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/Norm/">Norm</a>(2)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/redis/">redis</a>(1)
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/bndong/tag/">更多</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                        <!-- 积分与排名 -->
+                        <div id="sidebar_scorerank" class="sidebar-block">
+                            <div class="catListBlogRank">
+                                <h3 class="catListTitle">积分与排名</h3>
+                                <ul>
+                                    <li class="liScore">
+                                        积分 -
+                                        53525
+                                    </li>
+                                    <li class="liRank">
+                                        排名 -
+                                        12468
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                        <!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+                        <div id="sidebar_categories">
+
+                            <div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+                                <h3 class="catListTitle">
+
+
+                                    随笔分类
+                                    <span style="font-size:11px;font-weight:normal">(26)</span>
+
+
+                                </h3>
+
+
+                                <ul>
+
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/984677.html" rel="" target="">
+                                            ALi(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/919897.html" rel="" target="">
+                                            API(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/1241796.html" rel="" target="">
+                                            Architecture(3)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/1167570.html" rel="" target="">
+                                            DesignMode(4)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/1315535.html" rel="" target="">
+                                            Java(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/983290.html" rel="" target="">
+                                            JavaScript(2)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/911730.html" rel="" target="">
+                                            jQuery
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/1216200.html" rel="" target="">
+                                            Laravel(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/918406.html" rel="" target="">
+                                            Logger(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/910727.html" rel="" target="">
+                                            PHP(6)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/1315536.html" rel="" target="">
+                                            Spring(4)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/974397.html" rel="" target="">
+                                            UnitTesting(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/category/928768.html" rel="" target="">
+                                            WeChat(1)
+                                        </a>
+
+
+                                    </li>
+
+                                </ul>
+
+
+                            </div>
+                            <div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+                                <h3 class="catListTitle">
+
+
+                                    随笔档案
+                                    <span style="font-size:11px;font-weight:normal">(27)</span>
+
+
+                                </h3>
+
+
+                                <ul>
+
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2019/10.html" rel="" target="">
+                                            2019年10月(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2019/01.html" rel="" target="">
+                                            2019年1月(2)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2018/12.html" rel="" target="">
+                                            2018年12月(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2018/11.html" rel="" target="">
+                                            2018年11月(3)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2018/10.html" rel="" target="">
+                                            2018年10月(2)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2018/08.html" rel="" target="">
+                                            2018年8月(2)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2018/06.html" rel="" target="">
+                                            2018年6月(3)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2018/05.html" rel="" target="">
+                                            2018年5月(2)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2018/03.html" rel="" target="">
+                                            2018年3月(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2018/01.html" rel="" target="">
+                                            2018年1月(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2017/10.html" rel="" target="">
+                                            2017年10月(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2017/05.html" rel="" target="">
+                                            2017年5月(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2017/04.html" rel="" target="">
+                                            2017年4月(2)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2017/03.html" rel="" target="">
+                                            2017年3月(2)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2016/12.html" rel="" target="">
+                                            2016年12月(2)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archive/2016/11.html" rel="" target="">
+                                            2016年11月(1)
+                                        </a>
+
+
+                                    </li>
+
+                                </ul>
+
+
+                            </div>
+                            <div id="sidebar_articlearchive" class="catListArticleArchive sidebar-block">
+                                <h3 class="catListTitle">
+
+
+                                    文章档案
+                                    <span style="font-size:11px;font-weight:normal">(4)</span>
+
+
+                                </h3>
+
+
+                                <ul>
+
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/bndong/archives/2017/06.html"
+                                           rel="nofollow noopener noreferrer" target="">
+                                            2017年6月(4)
+                                        </a>
+
+
+                                    </li>
+
+                                </ul>
+
+
+                            </div>
+
+                        </div>
+
+                        <!-- 最新评论 -->
+                        <div id="sidebar_recentcomments" class="sidebar-block">
+                            <div class="catListComment">
+                                <h3 class="catListTitle">最新评论</h3>
+
+                                <div class="RecentCommentBlock">
+                                    <ul>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/bndong/p/6139598.html#4213449">1. Re:API
+                                            接口规范</a></li>
+                                        <li class="recent_comment_body">
+                                            这个api的规范，最初是一篇外文来着，现在传来传去，建议阅读下原文。另外，YAPI看起来比rap好玩，关键是支持swagger导入，大赞。ps,
+                                            皮肤鼓捣的很棒，喜欢钻研的人很厉害！...
+                                        </li>
+                                        <li class="recent_comment_author">--Ryan.Miao</li>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/bndong/p/9947729.html#4205238">2. Re:Hexo
+                                            + GitEE 搭建、备份、恢复、多终端</a></li>
+                                        <li class="recent_comment_body">厉害！</li>
+                                        <li class="recent_comment_author">--孔贼</li>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/bndong/p/9035848.html#4177401">3.
+                                            Re:Laravel5：重定向 redirect 函数的详细使用</a></li>
+                                        <li class="recent_comment_body">特效忒费资源</li>
+                                        <li class="recent_comment_author">--文林夕由</li>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/bndong/p/6139598.html#4098387">4. Re:API
+                                            接口规范</a></li>
+                                        <li class="recent_comment_body">@ AlexanderAnderson哈哈，特效优化确实不好，我去关两个特效！...</li>
+                                        <li class="recent_comment_author">--BNDong</li>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/bndong/p/6139598.html#4098354">5. Re:API
+                                            接口规范</a></li>
+                                        <li class="recent_comment_body"><b>厉害了我的特效！我电脑的涡轮风扇都兴奋了起来,i5-4310m CPU
+                                            占用都超过30%了，这特效的资源占用应该还有优化空间吧</b></li>
+                                        <li class="recent_comment_author">--AlexanderAnderson</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- 阅读排行榜 -->
+                        <div id="sidebar_topviewedposts" class="sidebar-block">
+                            <div class="catListView">
+                                <h3 class="catListTitle">阅读排行榜</h3>
+                                <div id="TopViewPostsBlock">
+                                    <ul style="word-break:break-all">
+                                        <li>
+                                            <a href="https://www.cnblogs.com/bndong/p/6139598.html">
+                                                1. API 接口规范(18366)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cnblogs.com/bndong/p/9035848.html">
+                                                2. Laravel5：重定向 redirect 函数的详细使用(16698)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cnblogs.com/bndong/p/6222266.html">
+                                                3. 微信开发_网页授权获取用户的基本信息(16658)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cnblogs.com/bndong/p/9132439.html">
+                                                4. 关于本博客皮肤样式(6702)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cnblogs.com/bndong/p/6860949.html">
+                                                5. 支付宝即时到账DEMO配置与使用(5826)
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- 评论排行榜 -->
+
+
+                        <!-- 推荐排行榜 -->
+                        <div id="sidebar_topdiggedposts" class="sidebar-block">
+
+                            <div id="topdigg_posts_wrap">
+                                <div class="catListView">
+                                    <h3 class="catListTitle">推荐排行榜</h3>
+                                    <div id="TopDiggPostsBlock">
+                                        <ul style="word-break: break-all">
+                                            <li>
+                                                <a href="https://www.cnblogs.com/bndong/p/9132439.html">
+                                                    1. 关于本博客皮肤样式(189)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.cnblogs.com/bndong/p/10300036.html">
+                                                    2. 书单(14)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.cnblogs.com/bndong/p/6139598.html">
+                                                    3. API 接口规范(10)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.cnblogs.com/bndong/p/7988365.html">
+                                                    4. 详解PHP反射API(6)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.cnblogs.com/bndong/p/10135370.html">
+                                                    5. Spring Cloud：统一异常处理(5)
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>loadBlogSideColumn();</script>
+                </div>
+
+            </div><!--end: sideBarMain -->
+        </div><!--end: sideBar 侧边栏容器 -->
+        <div class="clear"></div>
+    </div><!--end: main -->
+    <div class="clear"></div>
+    <div id="footer">
+        <footer>
+            <footer-background>
+                <figure class="clouds"></figure>
+                <figure class="background"></figure>
+                <figure class="foreground"></figure>
+                <figure class="poof"></figure>
+            </footer-background>
+        </footer>
+        <!--done-->
+        Copyright © 2019 BNDong
+        <br>
+        <div>【埋骨何须桑梓地<span id="footerTextIcon">❤️</span>人生何处不青山】</div>
+        <div><span id="blogRunTimeSpan">This blog has running : 1082 d 9 h 8 m 24 s</span><span
+                class="my-face">ღゝ◡╹)ノ♡</span></div>
+        <div id="blogrollInfo">友情链接：<a href="https://unixcs.cnblogs.com/" target="_blank">Unixcs</a><span
+                style="margin: 0 3px;">/</span><a href="https://msg.cnblogs.com/send/BNDong"
+                                                  target="_blank">友链配置丢失</a><span style="margin: 0 3px;">/</span><a
+                href="https://msg.cnblogs.com/send/BNDong" target="_blank">互换友链的</a><span
+                style="margin: 0 3px;">/</span><a href="https://msg.cnblogs.com/send/BNDong"
+                                                  target="_blank">请重新</a><span style="margin: 0 3px;">/</span><a
+                href="https://msg.cnblogs.com/send/BNDong" target="_blank">私信我！</a></div>
+        <div id="cnzzInfo">TodayIP:176 | TodayPV:308 | YesterdayIP:151 | YesterdayPV:241 | Online:8</div>
+        <div id="themeInfo">Theme version: <a href="https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/tree/v1.1.9"
+                                              target="_blank" style="color: #888;text-decoration: underline;">v1.1.9</a>
+            / Loading theme version: <a href="https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/tree/v1.1.9"
+                                        target="_blank" style="color: #888;text-decoration: underline;">v1.1.9</a></div>
+        <span id="poweredby">Powered by .NET Core 3.0.0 on Linux</span>
+
+
+    </div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+<div id="page_end_html">
+    <!-- CNZZ，如需要请去配置自己的，谢谢！ -->
+    <div id="cnzzProtocol" style="display: none;">
+        <span class="id_cnzz_stat_icon" id="cnzz_stat_icon_1274152299"><a
+                href="https://www.cnzz.com/stat/website.php?web_id=1274152299" target="_blank">站长统计</a><a
+                href="https://www.cnzz.com/stat/website.php?web_id=1274152299" target="_blank"> |  今日IP[176] | 今日PV[308] | 昨日IP[151] |  昨日PV[241] | </a><a
+                href="https://www.cnzz.com/stat/website.php?web_id=1274152299&amp;method=online"
+                target="_blank">当前在线[8]</a></span>
+        <!--<script src="./BNDong - 博客园_files/z_stat.php" type="text/javascript"></script>-->
+        <!--<script src="./BNDong - 博客园_files/core.php" charset="utf-8" type="text/javascript"></script>-->
+    </div>
+
+
+    <meting-js id="53950976" lrc-type="0" server="netease" order="random" type="playlist" fixed="true"
+               list-olded="true">
+        <div class="aplayer aplayer-withlist aplayer-fixed aplayer-narrow">
+            <div class="aplayer-list aplayer-list-hide" style="max-height: 250px">
+                <ol style="max-height: 250px">
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">1</span>
+                        <span class="aplayer-list-title">M.I.A.</span>
+                        <span class="aplayer-list-author">JAKE HOPE</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">2</span>
+                        <span class="aplayer-list-title">Busy and Important</span>
+                        <span class="aplayer-list-author">Tom Rosenthal</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">3</span>
+                        <span class="aplayer-list-title">lucky one</span>
+                        <span class="aplayer-list-author">mich</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">4</span>
+                        <span class="aplayer-list-title">Dim Lights</span>
+                        <span class="aplayer-list-author">vietra</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">5</span>
+                        <span class="aplayer-list-title">la vie en rose</span>
+                        <span class="aplayer-list-author">olivia herdt ⁂</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">6</span>
+                        <span class="aplayer-list-title">shelter</span>
+                        <span class="aplayer-list-author">hakaisu / Alys</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">7</span>
+                        <span class="aplayer-list-title">Movie</span>
+                        <span class="aplayer-list-author">Tom Misch</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">8</span>
+                        <span class="aplayer-list-title">Slow Down</span>
+                        <span class="aplayer-list-author">Mac Ayres</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">9</span>
+                        <span class="aplayer-list-title">Ship In The Sand</span>
+                        <span class="aplayer-list-author">Marble Sounds</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">10</span>
+                        <span class="aplayer-list-title">Stay Calm</span>
+                        <span class="aplayer-list-author">Ayelle / Calper</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">11</span>
+                        <span class="aplayer-list-title">foryou</span>
+                        <span class="aplayer-list-author">vietra</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">12</span>
+                        <span class="aplayer-list-title">John Wayne</span>
+                        <span class="aplayer-list-author">CAS</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">13</span>
+                        <span class="aplayer-list-title">Soaked Through</span>
+                        <span class="aplayer-list-author">Sara</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">14</span>
+                        <span class="aplayer-list-title">I Don't Care</span>
+                        <span class="aplayer-list-author">VFSix</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">15</span>
+                        <span class="aplayer-list-title">wave</span>
+                        <span class="aplayer-list-author">vietra</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">16</span>
+                        <span class="aplayer-list-title">Miss You Tonight（Cover 茶小姐和熊先生）</span>
+                        <span class="aplayer-list-author">Biscuits</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">17</span>
+                        <span class="aplayer-list-title">Take my heart</span>
+                        <span class="aplayer-list-author">SoKo</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">18</span>
+                        <span class="aplayer-list-title">ineedyou.</span>
+                        <span class="aplayer-list-author">vietra</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">19</span>
+                        <span class="aplayer-list-title">Missing?</span>
+                        <span class="aplayer-list-author">Emme Packer</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">20</span>
+                        <span class="aplayer-list-title">far</span>
+                        <span class="aplayer-list-author">vietra</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">21</span>
+                        <span class="aplayer-list-title">You’ve Got The Kind Of Nerve I Like</span>
+                        <span class="aplayer-list-author">Tiny Ruins</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">22</span>
+                        <span class="aplayer-list-title">Breathe</span>
+                        <span class="aplayer-list-author">Frally</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">23</span>
+                        <span class="aplayer-list-title">Mad World</span>
+                        <span class="aplayer-list-author">Gary Jules</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">24</span>
+                        <span class="aplayer-list-title">Cold Night</span>
+                        <span class="aplayer-list-author">Sarah MacDougall</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">25</span>
+                        <span class="aplayer-list-title">Landing&nbsp;Guy</span>
+                        <span class="aplayer-list-author">刘昊霖 / kidult.</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">26</span>
+                        <span class="aplayer-list-title">you belong to me</span>
+                        <span class="aplayer-list-author">Carla Bruni</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">27</span>
+                        <span class="aplayer-list-title">Suicide Is Painless</span>
+                        <span class="aplayer-list-author">Lady &amp; Bird</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">28</span>
+                        <span class="aplayer-list-title">The Blower's Daughter</span>
+                        <span class="aplayer-list-author">Damien Rice</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">29</span>
+                        <span class="aplayer-list-title">Here with Me</span>
+                        <span class="aplayer-list-author">Robot Koch / Susie Suh</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">30</span>
+                        <span class="aplayer-list-title">Forest Fires</span>
+                        <span class="aplayer-list-author">Lauren Aquilina</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">31</span>
+                        <span class="aplayer-list-title">Once</span>
+                        <span class="aplayer-list-author">Laura Marling</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">32</span>
+                        <span class="aplayer-list-title">Can't Keep It Inside</span>
+                        <span class="aplayer-list-author">Benedict Cumberbatch</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">33</span>
+                        <span class="aplayer-list-title">I Remember</span>
+                        <span class="aplayer-list-author">MOCCA</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">34</span>
+                        <span class="aplayer-list-title">First Love</span>
+                        <span class="aplayer-list-author">Michael Dulin</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">35</span>
+                        <span class="aplayer-list-title">Bizarre Love Triangle</span>
+                        <span class="aplayer-list-author">Marianna Leporace</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">36</span>
+                        <span class="aplayer-list-title">9 Crimes</span>
+                        <span class="aplayer-list-author">Damien Rice</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">37</span>
+                        <span class="aplayer-list-title">1965</span>
+                        <span class="aplayer-list-author">Zella Day</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">38</span>
+                        <span class="aplayer-list-title">Big Big World</span>
+                        <span class="aplayer-list-author">Emilia</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">39</span>
+                        <span class="aplayer-list-title">Everytime</span>
+                        <span class="aplayer-list-author">Britney Spears</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">40</span>
+                        <span class="aplayer-list-title">Heartbeats</span>
+                        <span class="aplayer-list-author">Amy Deasismont</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">41</span>
+                        <span class="aplayer-list-title">Liekkas</span>
+                        <span class="aplayer-list-author">Sofia Jannok</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">42</span>
+                        <span class="aplayer-list-title">Loving Strangers</span>
+                        <span class="aplayer-list-author">Jocelyn Pook / Russian Red</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">43</span>
+                        <span class="aplayer-list-title">Calendar Girl</span>
+                        <span class="aplayer-list-author">Stars</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">44</span>
+                        <span class="aplayer-list-title">Romeo's Tune</span>
+                        <span class="aplayer-list-author">Pajaro Sunrise</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">45</span>
+                        <span class="aplayer-list-title">Long Drive</span>
+                        <span class="aplayer-list-author">Jason Mraz</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">46</span>
+                        <span class="aplayer-list-title">Duet</span>
+                        <span class="aplayer-list-author">Rachael Yamagata</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">47</span>
+                        <span class="aplayer-list-title">Cruisin</span>
+                        <span class="aplayer-list-author">Sioen</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">48</span>
+                        <span class="aplayer-list-title">Nothing Really Matters</span>
+                        <span class="aplayer-list-author">Mr. Probz</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">49</span>
+                        <span class="aplayer-list-title">One Match</span>
+                        <span class="aplayer-list-author">Sarah Harmer</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">50</span>
+                        <span class="aplayer-list-title">Burn</span>
+                        <span class="aplayer-list-author">Angelika Vee</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">51</span>
+                        <span class="aplayer-list-title">What Are Words</span>
+                        <span class="aplayer-list-author">Chris Medina</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">52</span>
+                        <span class="aplayer-list-title">Oceanside</span>
+                        <span class="aplayer-list-author">Lainey Lou</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">53</span>
+                        <span class="aplayer-list-title">A Thousand Years</span>
+                        <span class="aplayer-list-author">Christina Perri</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">54</span>
+                        <span class="aplayer-list-title">Say Something</span>
+                        <span class="aplayer-list-author">A Great Big World</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">55</span>
+                        <span class="aplayer-list-title">Skinny Love</span>
+                        <span class="aplayer-list-author">Birdy</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">56</span>
+                        <span class="aplayer-list-title">All of the Stars</span>
+                        <span class="aplayer-list-author">Ed Sheeran</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">57</span>
+                        <span class="aplayer-list-title">Never Grow Old</span>
+                        <span class="aplayer-list-author">The Cranberries</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">58</span>
+                        <span class="aplayer-list-title">I See Fire (Kygo Remix)</span>
+                        <span class="aplayer-list-author">Kygo / Ed Sheeran</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">59</span>
+                        <span class="aplayer-list-title">On a Slow Boat to China</span>
+                        <span class="aplayer-list-author">Luke Thompson</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">60</span>
+                        <span class="aplayer-list-title">Hold Back the River</span>
+                        <span class="aplayer-list-author">James Bay</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">61</span>
+                        <span class="aplayer-list-title">Bubbly</span>
+                        <span class="aplayer-list-author">Colbie Caillat</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">62</span>
+                        <span class="aplayer-list-title">I Will Take You Home</span>
+                        <span class="aplayer-list-author">Ed Sheeran</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">63</span>
+                        <span class="aplayer-list-title">Bicycle Tricycle</span>
+                        <span class="aplayer-list-author">Rosie Thomas</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">64</span>
+                        <span class="aplayer-list-title">Say Hello</span>
+                        <span class="aplayer-list-author">Rosie Thomas / Sufjan Stevens</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">65</span>
+                        <span class="aplayer-list-title">Vincent</span>
+                        <span class="aplayer-list-author">Don McLean</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">66</span>
+                        <span class="aplayer-list-title">Grace</span>
+                        <span class="aplayer-list-author">Laura Story</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">67</span>
+                        <span class="aplayer-list-title">Lost Stars</span>
+                        <span class="aplayer-list-author">Keira Knightley</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">68</span>
+                        <span class="aplayer-list-title">Near or Far</span>
+                        <span class="aplayer-list-author">Carissa Rae</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">69</span>
+                        <span class="aplayer-list-title">The Last Goodbye</span>
+                        <span class="aplayer-list-author">Billy Boyd</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">70</span>
+                        <span class="aplayer-list-title">Dream</span>
+                        <span class="aplayer-list-author">Priscilla Ahn</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">71</span>
+                        <span class="aplayer-list-title">Riverside</span>
+                        <span class="aplayer-list-author">Agnes Obel</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">72</span>
+                        <span class="aplayer-list-title">Torch Song</span>
+                        <span class="aplayer-list-author">Priscilla Ahn</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">73</span>
+                        <span class="aplayer-list-title">Friends</span>
+                        <span class="aplayer-list-author">Ed Sheeran</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">74</span>
+                        <span class="aplayer-list-title">Thinking Out Loud</span>
+                        <span class="aplayer-list-author">Ed Sheeran</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">75</span>
+                        <span class="aplayer-list-title">If it's alright</span>
+                        <span class="aplayer-list-author">Katie Goes to Tokyo</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">76</span>
+                        <span class="aplayer-list-title">Let It Be Me</span>
+                        <span class="aplayer-list-author">Rosie Thomas</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">77</span>
+                        <span class="aplayer-list-title">Anything But You</span>
+                        <span class="aplayer-list-author">Civalias</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">78</span>
+                        <span class="aplayer-list-title">Gotta Have You</span>
+                        <span class="aplayer-list-author">The Weepies</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">79</span>
+                        <span class="aplayer-list-title">Santa Tell Me</span>
+                        <span class="aplayer-list-author">Ariana Grande</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">80</span>
+                        <span class="aplayer-list-title">Let Her Go</span>
+                        <span class="aplayer-list-author">Jasmine Thompson</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">81</span>
+                        <span class="aplayer-list-title">Love Someone</span>
+                        <span class="aplayer-list-author">Jason Mraz</span>
+                    </li>
+
+                    <li class="aplayer-list-light">
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">82</span>
+                        <span class="aplayer-list-title">Lost Stars</span>
+                        <span class="aplayer-list-author">Adam Levine</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">83</span>
+                        <span class="aplayer-list-title">If</span>
+                        <span class="aplayer-list-author">丁可</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">84</span>
+                        <span class="aplayer-list-title">Sugarcane</span>
+                        <span class="aplayer-list-author">Missy Higgins</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">85</span>
+                        <span class="aplayer-list-title">The Saltwater Room</span>
+                        <span class="aplayer-list-author">Owl City / Breanne Düren</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">86</span>
+                        <span class="aplayer-list-title">Valder Fields</span>
+                        <span class="aplayer-list-author">Tamas Wells</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">87</span>
+                        <span class="aplayer-list-title">Try</span>
+                        <span class="aplayer-list-author">Colbie Caillat</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">88</span>
+                        <span class="aplayer-list-title">Down</span>
+                        <span class="aplayer-list-author">Jason Walker</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">89</span>
+                        <span class="aplayer-list-title">Way Back Into Love</span>
+                        <span class="aplayer-list-author">Haley Bennett / Hugh Grant</span>
+                    </li>
+
+                    <li>
+                        <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+                        <span class="aplayer-list-index">90</span>
+                        <span class="aplayer-list-title">Try Try Try</span>
+                        <span class="aplayer-list-author">Jason Mraz</span>
+                    </li>
+
+                </ol>
+            </div>
+            <div class="aplayer-body" style="width: 400px;">
+                <div class="aplayer-pic"
+                     style="background-image: url(&quot;https://serverless-meto.herokuapp.com/meting/index.php?server=netease&amp;type=pic&amp;id=3235862724973369&quot;);background-color: #b7daff;">
+                    <div class="aplayer-button aplayer-play">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 31">
+                            <path d="M15.552 15.168q0.448 0.32 0.448 0.832 0 0.448-0.448 0.768l-13.696 8.512q-0.768 0.512-1.312 0.192t-0.544-1.28v-16.448q0-0.96 0.544-1.28t1.312 0.192z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="aplayer-info" style="display: block;">
+                    <div class="aplayer-music">
+                        <span class="aplayer-title">Lost Stars</span>
+                        <span class="aplayer-author"> - Adam Levine</span>
+                    </div>
+                    <div class="aplayer-controller">
+                        <div class="aplayer-bar-wrap">
+                            <div class="aplayer-bar">
+                                <div class="aplayer-loaded" style="width: 76.4177%;"></div>
+                                <div class="aplayer-played" style="width: 0; background: #b7daff;">
+                        <span class="aplayer-thumb" style="background: #b7daff;">
+                            <span class="aplayer-loading-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                                    viewBox="0 0 32 32"><path
+                                    d="M4 16c0-6.6 5.4-12 12-12s12 5.4 12 12c0 1.2-0.8 2-2 2s-2-0.8-2-2c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8c1.2 0 2 0.8 2 2s-0.8 2-2 2c-6.6 0-12-5.4-12-12z"></path></svg></span>
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aplayer-time aplayer-time-narrow">
+                <span class="aplayer-time-inner">
+                    <span class="aplayer-ptime">00:00</span> / <span class="aplayer-dtime">04:27</span>
+                </span>
+                            <span class="aplayer-icon aplayer-icon-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path
+                            d="M25.468 6.947c-0.326-0.172-0.724-0.151-1.030 0.057l-6.438 4.38v-3.553c0-0.371-0.205-0.71-0.532-0.884-0.326-0.172-0.724-0.151-1.030 0.057l-12 8.164c-0.274 0.186-0.438 0.496-0.438 0.827s0.164 0.641 0.438 0.827l12 8.168c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-3.556l6.438 4.382c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-16.333c0-0.371-0.205-0.71-0.532-0.884z"></path></svg>
+                </span>
+                            <span class="aplayer-icon aplayer-icon-play">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 31"><path
+                            d="M15.552 15.168q0.448 0.32 0.448 0.832 0 0.448-0.448 0.768l-13.696 8.512q-0.768 0.512-1.312 0.192t-0.544-1.28v-16.448q0-0.96 0.544-1.28t1.312 0.192z"></path></svg>
+                </span>
+                            <span class="aplayer-icon aplayer-icon-forward">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path
+                            d="M25.468 6.947c-0.326-0.172-0.724-0.151-1.030 0.057l-6.438 4.38v-3.553c0-0.371-0.205-0.71-0.532-0.884-0.326-0.172-0.724-0.151-1.030 0.057l-12 8.164c-0.274 0.186-0.438 0.496-0.438 0.827s0.164 0.641 0.438 0.827l12 8.168c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-3.556l6.438 4.382c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-16.333c0-0.371-0.205-0.71-0.532-0.884z"></path></svg>
+                </span>
+                            <div class="aplayer-volume-wrap">
+                                <button type="button" class="aplayer-icon aplayer-icon-volume-down">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28 32">
+                                        <path d="M13.728 6.272v19.456q0 0.448-0.352 0.8t-0.8 0.32-0.8-0.32l-5.952-5.952h-4.672q-0.48 0-0.8-0.352t-0.352-0.8v-6.848q0-0.48 0.352-0.8t0.8-0.352h4.672l5.952-5.952q0.32-0.32 0.8-0.32t0.8 0.32 0.352 0.8zM20.576 16q0 1.344-0.768 2.528t-2.016 1.664q-0.16 0.096-0.448 0.096-0.448 0-0.8-0.32t-0.32-0.832q0-0.384 0.192-0.64t0.544-0.448 0.608-0.384 0.512-0.64 0.192-1.024-0.192-1.024-0.512-0.64-0.608-0.384-0.544-0.448-0.192-0.64q0-0.48 0.32-0.832t0.8-0.32q0.288 0 0.448 0.096 1.248 0.48 2.016 1.664t0.768 2.528z"></path>
+                                    </svg>
+                                </button>
+                                <div class="aplayer-volume-bar-wrap">
+                                    <div class="aplayer-volume-bar">
+                                        <div class="aplayer-volume"
+                                             style="height: 70%; background: rgb(183, 218, 255);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="aplayer-icon aplayer-icon-order">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+                                    <path d="M22.667 4l7 6-7 6 7 6-7 6v-4h-3.653l-3.76-3.76 2.827-2.827 2.587 2.587h2v-8h-2l-12 12h-6v-4h4.347l12-12h3.653v-4zM2.667 8h6l3.76 3.76-2.827 2.827-2.587-2.587h-4.347v-4z"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="aplayer-icon aplayer-icon-loop">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 29 32">
+                                    <path d="M9.333 9.333h13.333v4l5.333-5.333-5.333-5.333v4h-16v8h2.667v-5.333zM22.667 22.667h-13.333v-4l-5.333 5.333 5.333 5.333v-4h16v-8h-2.667v5.333z"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="aplayer-icon aplayer-icon-menu">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 22 32">
+                                    <path d="M20.8 14.4q0.704 0 1.152 0.48t0.448 1.12-0.48 1.12-1.12 0.48h-19.2q-0.64 0-1.12-0.48t-0.48-1.12 0.448-1.12 1.152-0.48h19.2zM1.6 11.2q-0.64 0-1.12-0.48t-0.48-1.12 0.448-1.12 1.152-0.48h19.2q0.704 0 1.152 0.48t0.448 1.12-0.48 1.12-1.12 0.48h-19.2zM20.8 20.8q0.704 0 1.152 0.48t0.448 1.12-0.48 1.12-1.12 0.48h-19.2q-0.64 0-1.12-0.48t-0.48-1.12 0.448-1.12 1.152-0.48h19.2z"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="aplayer-icon aplayer-icon-lrc">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+                                    <path d="M26.667 5.333h-21.333c-0 0-0.001 0-0.001 0-1.472 0-2.666 1.194-2.666 2.666 0 0 0 0.001 0 0.001v-0 16c0 0 0 0.001 0 0.001 0 1.472 1.194 2.666 2.666 2.666 0 0 0.001 0 0.001 0h21.333c0 0 0.001 0 0.001 0 1.472 0 2.666-1.194 2.666-2.666 0-0 0-0.001 0-0.001v0-16c0-0 0-0.001 0-0.001 0-1.472-1.194-2.666-2.666-2.666-0 0-0.001 0-0.001 0h0zM5.333 16h5.333v2.667h-5.333v-2.667zM18.667 24h-13.333v-2.667h13.333v2.667zM26.667 24h-5.333v-2.667h5.333v2.667zM26.667 18.667h-13.333v-2.667h13.333v2.667z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="aplayer-notice"></div>
+                <div class="aplayer-miniswitcher">
+                    <button class="aplayer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+                            <path d="M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="aplayer-lrc">
+                <div class="aplayer-lrc-contents"
+                     style="transform: translateY(0); -webkit-transform: translateY(0);"></div>
+            </div>
+        </div>
+    </meting-js>
+</div>
+
+<script type="text/javascript">getFollowStatus('61118ff5-a5ac-e611-845c-ac853d9f53ac');</script>
+
+<canvas id="bgCanvas" width="1366" height="150"
+        style="display: block; position: fixed; margin: 0px; padding: 0px; border: 0px; outline: 0px; left: 0px; top: 0px; width: 100%; height: 100%; z-index: -1;"></canvas>
+</body>
+</html>

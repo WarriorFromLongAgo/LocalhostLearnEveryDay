@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+
+    <h1 align="center">用户信息列表</h1>
+
+    <div style="float: left">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+            </div>
+            <button type="submit" class="btn btn-default">Send invitation</button>
+        </form>
+    </div>
+
+    <div style="float: right">
+        <button type="button" class="btn btn-default" href="addStudent.jsp">添加学生</button>
+        <button type="button" class="btn btn-default" href="addStudent.jsp">删除选中学生</button>
+    </div>
+
+    <table border="1px" class="table table-bordered table-hover">
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>籍贯</th>
+            <th>QQ</th>
+            <th>邮箱</th>
+            <th>操作</th>
+        </tr>
+        <c:forEach items="${studentList}" var="student" varStatus="s">
+            <tr>
+                <td>${student.id}</td>
+                <td>${student.name}</td>
+                <td>${student.sex}</td>
+                <td>${student.age}</td>
+                <td>${student.birthplace}</td>
+                <td>${student.qqAccount}</td>
+                <td>${student.mailbox}</td>
+                <td>
+                    <button type="button" class="btn btn-default btn-sm" href="updateStudent.jsp">修改</button>
+                    <button type="button" class="btn btn-default btn-sm" href="javascript:deleteStudent(student.id);">删除
+                    </button>
+                </td>
+            </tr>
+        </c:forEach>
+        <tr style="text-align: center" align="center">
+            <td colspan="7">
+                <button id="addStudent">添加联系人</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>
+

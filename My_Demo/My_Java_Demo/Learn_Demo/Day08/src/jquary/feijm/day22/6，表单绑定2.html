@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 使用on给按钮绑定 单击事件 click
+            $("#button1").on("click", function () {
+                alert("我被点击了！！")
+            });
+
+            //使用off 来解除button按钮的单击事件
+            $("#button2").click(function () {
+                $("#button1").off("click");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<input type="button" id="button1" value=" 使用on绑定点击事件 ">
+<input type="button" id="button2" value=" 使用off解除绑定点击事件 ">
+
+</body>
+</html>

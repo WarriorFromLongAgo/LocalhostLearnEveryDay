@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="day19 Redis2:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/day19_Redis2_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="day19 Redis2/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="day19Redis2" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="commons-pool2-2.3 (2)" module-name="day19 Redis2" />
+          <element id="library" level="module" name="JUnit4" module-name="day19 Redis2" />
+          <element id="library" level="module" name="jstl-impl" module-name="day19 Redis2" />
+          <element id="library" level="module" name="druid-1.0.9" module-name="day19 Redis2" />
+          <element id="library" level="module" name="commons-beanutils-1.8.3" module-name="day19 Redis2" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

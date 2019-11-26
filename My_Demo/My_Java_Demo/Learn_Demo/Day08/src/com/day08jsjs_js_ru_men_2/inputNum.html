@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function myFunc() {
+            try {
+                var inputFirst = document.getElementById("first");
+                var x = inputFirst.value;
+                document.write(x);
+                if (x === "") {
+                    throw "空";
+                }
+                if (isNaN(x)) {
+                    throw "not a number";
+                }
+                if (x > 10) {
+                    throw "太高";
+                }
+                if (x < 5) {
+                    throw "太小";
+                }
+            }catch (e) {
+                var elementById = document.getElementById("mess");
+                elementById.innerHTML = "Error: " + e + ".";
+
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+
+
+</body>
+
+<h1>这是我的第一个js</h1>
+<p>请输入一个数字</p>
+<input type="text" id="first">
+<button onclick="myFunc()">test in</button>
+<p id="mess"></p>
+
+</html>

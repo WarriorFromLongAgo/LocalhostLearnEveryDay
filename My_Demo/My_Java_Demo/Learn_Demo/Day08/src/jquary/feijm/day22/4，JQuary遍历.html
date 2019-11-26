@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuary遍历</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        // JS的for循环遍历方式	for(初始值：循环结束条件：步长)
+        // JQuary的遍历方式		对象.each(callback)
+        // $.each(object, [callback])
+        // for..of(js 3.0)
+        $(function () {
+            var cityArr = $("#city li");
+
+            for (var i = 0; i < cityArr.length; i++) {
+                alert(i + "：" + cityArr[i].innerHTML);
+            }
+
+            cityArr.each(function () {
+                // alert(this.innerHTML);
+            });
+
+            cityArr.each(function (index, element) {
+                // alert(index + "：" + element.innerHTML);
+
+                alert(index + "：" + $(element).html());
+            });
+
+            cityArr.each(function (index, element) {
+                // alert(index + "：" + element.innerHTML);
+
+                alert(index + "：" + $(element).html());
+            });
+
+            cityArr.each(function (index, element) {
+                // alert(index + "：" + element.innerHTML);
+                if ("天津" === $(element).html()) {
+                    // 这里返回false，就是break
+                    // 这是返回true，就是continue
+                    return false;
+                }
+                alert(index + "：" + $(element).html());
+            });
+
+            $.each(cityArr, function (index, element) {
+                // alert($(this).js_ru_men1());
+                alert(index + "：" + element.innerHTML);
+            });
+
+            // for (liii of cityArr) {
+            //     alert($(liii).js_ru_men1());
+            // }
+        });
+    </script>
+</head>
+<body>
+<ul id="city">
+    <li>北京</li>
+    <li>天津</li>
+    <li>伤害</li>
+    <li>深圳</li>
+</ul>
+</body>
+</html>

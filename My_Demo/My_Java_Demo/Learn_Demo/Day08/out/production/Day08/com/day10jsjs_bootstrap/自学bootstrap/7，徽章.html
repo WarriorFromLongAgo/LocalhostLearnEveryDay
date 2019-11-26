@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="page-header">
+        <h1>Example page header
+            <small>Subtext for header</small>
+        </h1>
+    </div>
+    <div class="jumbotron">
+        <p>巨幕</p>
+        <h1>Hello, world!</h1>
+        <p>djsahdjashfdsjkhfhjsdjkfhdsjkfhdshfjksdgfgdw</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        <p>end............</p>
+    </div>
+
+    <p> 缩略图 </p>
+    <div class="row">
+        <div class="col-sm-6  col-md-4">
+            <div class="thumbnail">
+                <img src="../img/国外游2.jpg" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
+                                                                                       role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="../img/国外游2.jpg" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
+                                                                                       role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="../img/国外游2.jpg" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
+                                                                                       role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>end............</p>
+
+    <p>警告框</p>
+    <div class="alert alert-success" role="alert">1111111111111111</div>
+    <div class="alert alert-info" role="alert">2222222222222222</div>
+    <div class="alert alert-warning" role="alert">333333333333333</div>
+    <div class="alert alert-danger" role="alert">44444444444444</div>
+    <p>end,,,,,,,,,,</p>
+
+    <p> 警告框，可关闭的 </p>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </div>
+    <p>end.......</p>
+
+    <p>警告框中的链接</p>
+    <div class="alert alert-success" role="alert">
+        <a href="#" class="alert-link">...</a>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <a href="#" class="alert-link">...</a>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <a href="#" class="alert-link">...</a>
+    </div>
+    <div class="alert alert-danger" role="alert">
+        <a href="#" class="alert-link">...</a>
+    </div>
+    <p>end.................</p>
+</div>
+
+<div class="container">
+    <p>默认样式的进度条</p>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+             style="width: 10%;">
+            <span class="sr-only">60% Complete</span>
+        </div>
+    </div>
+    <p>end..........</p>
+    <p>带有提示标签的进度条</p>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+             style="width: 60%;">
+
+            60%
+        </div>
+    </div>
+    <p>end..................</p>
+    <p>当进度条很短的时候</p>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+             style="min-width: 2em;">
+            0%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"
+             style="min-width: 2em; width: 2%;">
+            2%
+        </div>
+    </div>
+    <p>end....................</p>
+
+    <p>带有条纹的，并且有不同颜色的</p>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40"
+             aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+            <span class="sr-only">40% Complete (success)</span>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20"
+             aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+            <span class="sr-only">20% Complete</span>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60"
+             aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+            <span class="sr-only">60% Complete (warning)</span>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80"
+             aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+            <span class="sr-only">80% Complete (danger)</span>
+        </div>
+    </div>
+    <p>end....................</p>
+
+
+    <p> 动画效果 </p>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0"
+             aria-valuemax="100" style="width: 45%">
+            <span class="sr-only">45% Complete</span>
+        </div>
+    </div>
+    <p> 堆叠效果 </p>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success" style="width: 35%">
+            <span class="sr-only">35% Complete (success)</span>
+        </div>
+        <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+            <span class="sr-only">20% Complete (warning)</span>
+        </div>
+        <div class="progress-bar progress-bar-danger" style="width: 10%">
+            <span class="sr-only">10% Complete (danger)</span>
+        </div>
+    </div>
+    <p>end....................</p>
+
+    <p>媒体效果</p>
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="../img/国外游2.jpg" alt="...">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Media heading</h4>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../img/国外游2.jpg" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+            </div>
+        </div>
+    </div>
+    <p>end....................</p>
+
+    <p>媒体对象列表,对齐方式</p>
+    <ul class="media-list">
+        <li class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../img/国外游2.jpg" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                ...
+            </div>
+        </li>
+
+    </ul>
+    <p>end....................</p>
+
+    <p> 最简单的列表组 基本实例 以及加入徽章 以及加入链接</p>
+    <ul class="list-group">
+        <li class="list-group-item">Cras justo odio <span class="badge">14</span></li>
+        <li class="list-group-item">Dapibus ac facilisis in <span class="badge">14</span></li>
+        <li class="list-group-item"><a href="#" class="list-group-item active"> Morbi leo risus</a></li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+        <a href="#" class="list-group-item active"> Morbi leo risus</a>
+    </ul>
+    <p>end....................</p>
+
+    <p>列表组与按钮</p>
+    <div class="list-group">
+        <button type="button" class="list-group-item disabled">Cras justo odio</button>
+        <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
+        <button type="button" class="list-group-item">Morbi leo risus</button>
+        <button type="button" class="list-group-item">Porta ac consectetur ac</button>
+        <button type="button" class="list-group-item">Vestibulum at eros</button>
+    </div>
+    <p>end....................</p>
+
+    <p>为标签增加情景类 同时可以进行按钮的选择</p>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+        <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+        <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+        <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+    </ul>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
+        <a href="#" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
+    </div>
+    <p>end....................</p>
+
+    <p>带表格的面板</p>
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Panel heading</div>
+        <div class="panel-body">
+            <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla
+                sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam
+                id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p>如果没有 .panel-body ，面版标题会和表格连接起来，没有空隙。</p>
+        </div>
+
+        <!-- Table -->
+        <table class="table" style="text-align: center">
+            <tr>
+                <td>1111</td>
+                <td>1111</td>
+                <td>1111</td>
+            </tr>
+            <tr>
+                <td>1111</td>
+                <td>1111</td>
+                <td>1111</td>
+            </tr>
+            <tr>
+                <td>1111</td>
+                <td>1111</td>
+                <td>1111</td>
+            </tr>
+        </table>
+    </div>
+    <p>end.....................</p>
+
+
+    <p>带表格的面板</p>
+    <p>end....................</p>
+    <p>end....................</p>
+</div>
+
+</body>
+</html>

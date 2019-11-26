@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+
+    <style>
+        table {
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+
+        td, th {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        div {
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div>
+    <input type="text" id="id" placeholder="请输入编号">
+    <input type="text" id="name" placeholder="请输入姓名">
+    <input type="text" id="gender" placeholder="请输入性别">
+    <input type="button" value="添加" id="btn_add">
+
+</div>
+
+
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="del(this);">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="del(this);">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>岳不群</td>
+        <td>?</td>
+        <td><a href="javascript:void(0);" onclick="del(this);">删除</a></td>
+    </tr>
+</table>
+<script>
+    /*
+    *   思路：
+    *   1、获得用户输入的文本值
+    *   2、创建一个tr元素
+    *   3.把文本值赋值给td
+    *   4、tr去添加td
+    *   5、table去添加tr
+    * */
+
+    //获得button
+    var button = document.getElementById("btn_add");
+    button.onclick = function () {
+
+        var id = document.getElementById("id").value;
+        //控制台输出日志
+        console.log(id)
+        var name = document.getElementById("name").value;
+        var gender = document.getElementById("gender").value;
+        /*    <tr>
+                <td>2</td>
+                <td>任我行</td>
+                <td>男</td>
+                <td><a href="javascript:void(0);" >删除</a></td>
+                </tr>*/
+        //创建td  id
+        var td1 = document.createElement("td");
+        var text1 = document.createTextNode(id);
+        td1.appendChild(text1);
+
+        //创建td  name
+        var td2 = document.createElement("td");
+        var text2 = document.createTextNode(name);
+        td2.appendChild(text2);
+        //创建 td  gender
+        var td3 = document.createElement("td");
+        var text3 = document.createTextNode(gender);
+        td3.appendChild(text3);
+        //创建 td  操作
+        var td4 = document.createElement("td");
+        var a = document.createElement("a");
+        var del = document.createTextNode("删除");
+        a.setAttribute("href", "javascript:void(0);");
+        a.setAttribute("onclick","del(this);")
+        a.appendChild(del);
+        td4.appendChild(a);
+        //创建一个tr
+        var tr = document.createElement("tr");
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        //获得父元素table
+        var table = document.getElementsByTagName("table")[0];
+        //将tr添加到table
+        table.appendChild(tr);
+    }
+
+    function del(obj) {
+        //获得table元素
+        var parentNode = obj.parentNode.parentNode.parentNode;
+        var tr = obj.parentNode.parentNode;
+        parentNode.removeChild(tr);
+
+    }
+</script>
+</body>
+</html>

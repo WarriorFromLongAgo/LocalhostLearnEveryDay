@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="../changeImg2.html">1,更换图片</a>
+<a href="../changeImg.html">1,更换图片</a>
+<a href="../cus.html">1,更换图片</a>
+<br>
+<input type="button" id="forword" value="forword">
+<input type="button" id="gofor" value="gofor">
+<input type="button" id="goback" value="goback">
+<input type="button" id="back" value="back">
+
+<script>
+    var forwordd = document.getElementById("forword");
+    forwordd.onclick = function () {
+        history.forward();
+    };
+
+    var gofor = document.getElementById("gofor");
+    gofor.onclick = function () {
+        history.go(1);
+    };
+
+    var goback = document.getElementById("goback");
+    goback.onclick = function () {
+        history.go(-1);
+    };
+
+    var back = document.getElementById("back");
+    back.onclick = function () {
+        history.back();zz
+    };
+</script>
+</body>
+</html>

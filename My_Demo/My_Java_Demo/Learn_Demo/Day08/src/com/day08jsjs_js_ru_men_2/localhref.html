@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><span id="spann" style="color: red">5</span> 秒后开始跳转</p>
+
+<script>
+    var spann = document.getElementById("spann");
+
+    var temp = spann.innerText;
+    setInterval(ffff, 1000);
+
+    function ffff() {
+        if (temp < 0) {
+            temp = 0;
+        }
+        spann.innerText = temp;
+        temp--;
+        if (temp === 0) {
+            location.href = "/changeImg2.html?_ijt=blhbjd5eccc6erdcp6k9cr0tk5";
+        }
+    }
+</script>
+
+</body>
+</html>

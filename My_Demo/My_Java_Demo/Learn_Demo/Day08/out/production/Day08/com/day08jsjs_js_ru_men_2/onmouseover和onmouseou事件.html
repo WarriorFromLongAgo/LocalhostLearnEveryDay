@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;">把鼠标移到上面</div>
+
+<h1 onmouseover="style.color='red'" onmouseout="style.color='blue'">
+    请把鼠标移到这段文本上
+</h1>
+
+<script>
+    function mOver(obj)
+    {
+        obj.innerHTML="谢谢"
+    }
+
+    function mOut(obj)
+    {
+        obj.innerHTML="把鼠标移到上面"
+    }
+</script>
+
+
+</body>
+</html>

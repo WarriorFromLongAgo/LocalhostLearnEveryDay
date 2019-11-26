@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+failLogin
+<%
+//获取request 请求中的数据
+String message = (String)request.getAttribute("message");
+//        判断 message 是否为空
+if(message != null){
+%>
+<font style="color: red">
+    <%= message %>
+</font>
+<%
+}
+%>
+</body>
+</html>

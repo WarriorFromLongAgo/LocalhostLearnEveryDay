@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="diyspringbootstarter" />
+        <module name="diyspringbootstarterautoconfig" />
+        <module name="springboot_jpa" />
+        <module name="springboot_logging" />
+        <module name="springboot_mybatis" />
+        <module name="springBootday1" />
+        <module name="springbootday102" />
+        <module name="springbootday1点1" />
+        <module name="springbootjdbc2" />
+        <module name="springbootresouces" />
+        <module name="springdata_jdbc" />
+        <module name="thymeleaf1" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="diyspringbootstarter" target="1.5" />
+      <module name="diyspringbootstarterautoconfig" target="1.8" />
+      <module name="springboot_jpa" target="1.8" />
+      <module name="springboot_logging" target="1.8" />
+      <module name="springboot_mybatis" target="1.8" />
+      <module name="springBootday1" target="1.8" />
+      <module name="springbootday102" target="1.8" />
+      <module name="springbootday1点1" target="1.8" />
+      <module name="springbootjdbc2" target="1.8" />
+      <module name="springbootresouces" target="1.8" />
+      <module name="springbootstarter" target="1.8" />
+      <module name="springdata_jdbc" target="1.8" />
+      <module name="thymeleaf1" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springBootday1/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootday1点1/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootday102/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_logging/pom.xml" />
+        <option value="$PROJECT_DIR$/thymeleaf1/pom.xml" />
+        <option value="$PROJECT_DIR$/springdata_jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootjdbc2/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootresouces/pom.xml" />
+        <option value="$PROJECT_DIR$/diyspringbootstarter/pom.xml" />
+        <option value="$PROJECT_DIR$/diyspringbootstarterautoconfig/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

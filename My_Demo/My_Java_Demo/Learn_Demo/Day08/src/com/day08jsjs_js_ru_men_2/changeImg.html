@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="img/01.gif" id="change" onclick="change2();">
+
+<script>
+    var arrSrc = [];
+    arrSrc[0] = "img/01.gif";
+    arrSrc[1] = "img/02.gif";
+
+    var i = 1;
+    var change = document.getElementById("change");
+    change.onclick = function () {
+        if (i >= arrSrc.length) {
+            i = 0;
+        }
+        change.src = arrSrc[i];
+        i++;
+    };
+    function change2() {
+        if (i >= arrSrc.length) {
+            i = 0;
+        }
+        change.src = arrSrc[i];
+        i++;
+    }
+</script>
+
+</body>
+</html>

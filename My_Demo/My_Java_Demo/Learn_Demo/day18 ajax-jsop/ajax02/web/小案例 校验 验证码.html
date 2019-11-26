@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <!--    必须重新导入，不能够复制粘贴      -->
+    <!--    <script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>-->
+    <script>
+
+        $(function () {
+            $("input#userName").focus(function () {
+                $("span#s1").html("请输入用户名").css("color", "green");
+            }).blur(function () {
+                var userNameDate = $(this).val();
+                alert(userNameDate);
+
+                if (userNameDate.length >= 3 && userNameDate.length <= 15) {
+                    $("span#s1").html("验证通过").css("color", "green");
+                } else {
+                    $("span#s1").html("验证失败").css("color", "red");
+                    $(this).val("");
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+用户名: <input type="text" id="userName"> <span id="s1"></span> <br>
+密码: <input type="password" id="passWord"> <span id="s2"></span> <br>
+
+</body>
+</html>

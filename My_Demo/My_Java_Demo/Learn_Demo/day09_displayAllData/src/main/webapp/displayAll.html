@@ -1,0 +1,229 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>display all</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-lib/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--    &lt;!&ndash;[if lt IE 9]>-->
+    <!--    &lt;!&ndash;<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>&ndash;&gt;-->
+    <!--    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>&ndash;&gt;-->
+    <!-- [endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="bootstrap-lib/js/jquery-3.3.1.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="bootstrap-lib/js/bootstrap.js"></script>
+
+    <style type="text/css">
+        td, th {
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+        /*入口函数*/
+        $(function () {
+            /*加载完成后，向后台发送数据，，问题：这样加载太慢了，*/
+            $.post("displayAllServlet", {}, function (studentList) {
+                // alert(studentList.length);
+                for (var i = studentList.length - 1; i >= 0; i--) {
+                    // alert(i);
+                    $("tr#displayAll").after(
+                        "<tr id='" + studentList[i].id + "'>" +
+                        // 选择框绑定id
+                        "<td><input type='checkbox' name='tab' value=" + studentList[i].id + "></td>" +
+                        // 这个是前面的序号
+                        "<td>" + (i + 1) + "</td>" +
+                        // 依次为姓名，性别，年龄，地址，QQ，邮箱
+                        "<td>" + studentList[i].name + "</td>" +
+                        "<td>" + studentList[i].gender + "</td>" +
+                        "<td>" + studentList[i].age + "</td>" +
+                        "<td>" + studentList[i].address + "</td>" +
+                        "<td>" + studentList[i].qqAccount + "</td>" +
+                        "<td>" + studentList[i].email + "</td>" +
+                        // 下面是两个按钮
+                        "<td>" +
+                        "<button type='button' class='btn btn-default btn-sm'>" +
+                        // 点击修改直接跳转到修改学生页面
+                        // 不可以这样做，必须要绑定 I D
+                        "<a href='updateStudent.html?id=" + studentList[i].id + "'>修改1 </a>" +
+                        "<a onclick='updateStudent(" + studentList[i].id + ")'> 修改2</a>" +
+                        "</button>" +
+                        "<button type='button' class='btn btn-default btn-sm'>" +
+                        // 点击删除，弹窗提示用户，根据id删除
+                        "<a onclick='deleteStudent(" + studentList[i].id + ")'>删除</a>" +
+                        "</button>" +
+                        "</td>" +
+                        "</tr>"
+                    )
+                }
+            }, "json");
+
+            // 点击全选的时候绑定事件
+            $("input#selectAll").click(function () {
+                // alert("check");
+                $("input[name='tab']").prop("checked", true);
+            });
+
+            // 点击取消全选的时候绑定事件
+            $("input#unSelectAll").click(function () {
+                // alert("check");
+                $("input[name='tab']").prop("checked", false);
+            });
+
+            // 删除选中
+            $("button#deleteSelectStudent").click(function () {
+                if (confirm("您确定要删除吗")) {
+                    var deleteArr = $("input[name='tab']:checked");
+                    if (deleteArr.length <= 0) {
+                        alert("您没有进行选中");
+                    } else {
+                        alert(deleteArr.length);
+                        var deleteIdArr = [];
+                        var deleteIdStr = "";
+                        // var indexId = 0;
+                        for (var i = 0; i < deleteArr.length; i++) {
+                            // var id = deleteArr[i].prop("id");
+                            if (i < deleteArr.length - 1) {
+                                deleteIdStr += $(deleteArr[i]).val() + ":";
+                                deleteIdArr[i] = $(deleteArr[i]).val();
+                            } else {
+                                deleteIdStr += $(deleteArr[i]).val();
+                                deleteIdArr[i] = $(deleteArr[i]).val();
+
+                            }
+                        }
+
+                        $.post("deleteSelectServlet", {deleteIdStr: deleteIdStr}, function (deleteSelectFlag) {
+                            alert(deleteSelectFlag);
+                            if ("true" === deleteSelectFlag) {
+                                alert(deleteSelectFlag);
+                                for (var i = 0; i < deleteIdArr.length; i++) {
+                                    alert(deleteIdArr[i]);
+                                    $("tr[id='" + deleteIdArr[i] + "']").remove();
+                                }
+                            }
+                        }, "json");
+                        //遍历数组，对每一个选中的checked进行ID追溯，
+                        //传入后台，传入的时候先判断，每一个ID是否都存在。存在则进行删除。
+                    }
+                }
+            });
+        });
+
+        /*单行删除*/
+        function deleteStudent(deleteid) {
+            alert(deleteid);
+            if (confirm("您确定要删除吗")) {
+                $.post("deleteOneStudentServlet", {id: deleteid}, function (flag) {
+                    if ("true" === flag) {
+                        alert(flag);
+                        // $("tr[id='"+index+"']").remove();
+                        $("tr[id='" + deleteid + "']").remove();
+                        // $("tr[id=deleteid]").remove();
+                        // $(deleteid).remove();
+                    }
+                }, "json");
+            }
+        }
+
+
+        // 往修改页面发送ID，根据ID进行回显
+        function updateStudent(id) {
+            // alert("add" + id);
+            window.location.href = "updateStudent.html?id=" + id;
+        }
+
+        // function deleteStudent(id) {
+        //     if (confirm("您确定要删除吗")) {
+        //         location.href = "${pageContext.request.contextPath}/deleteController?id=" + id;
+        //     }
+        // }
+        //
+        // window.onload = function () {
+        //     var deleteStudent = document.getElementById("deleteStudent");
+        //     deleteStudent.onclick = function () {
+        //         if (confirm("您确定要删除吗？")) {
+        //             var deleteFlag = false;
+        //             var unSelectAllNameArr = document.getElementsByName("tab");
+        //             for (var i = 0; i < unSelectAllNameArr.length; i++) {
+        //                 // 有一个是选中的
+        //                 if (unSelectAllNameArr[i].checked) {
+        //                     deleteFlag = true;
+        //                     break;
+        //                 }
+        //             }
+        //
+        //             if (deleteFlag) {
+        //                 alert(123123213123);
+        //                 document.getElementById("seleteForm").submit();
+        //             }
+        //
+        //         }
+        //     }
+        //
+        // }
+    </script>
+</head>
+<body>
+
+<div class="container">
+
+    <h3 style="text-align: center">用户信息列表</h3>
+
+    <div style="float: left">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">姓名</label>
+                <input type="text" class="form-control" id="exampleInputName2">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputName3">籍贯</label>
+                <input type="text" class="form-control" id="exampleInputName3">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail2">
+            </div>
+            <button type="submit" class="btn btn-default">查询</button>
+        </form>
+    </div>
+
+    <div style="float: right;margin-bottom: 5px">
+        <a href="addStudent.html">
+            <button type="button" class="btn btn-primary">添加学生</button>
+        </a>
+
+        <button type="button" class="btn btn-primary" id="deleteSelectStudent">删除选中学生</button>
+    </div>
+
+    <!--<form action="${pageContext.request.contextPath}/deleteSeleteController" method="post" id="seleteForm">-->
+    <table class="table table-bordered table-hover">
+        <tr class="success" id="displayAll">
+            <th>
+                <input type="button" id="selectAll" value="全选">
+                <input type="button" id="unSelectAll" value="全不选">
+            </th>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>籍贯</th>
+            <th>QQ</th>
+            <th>邮箱</th>
+            <th>操作</th>
+        </tr>
+
+    </table>
+    <!--</form>-->
+</div>
+
+</body>
+</html>

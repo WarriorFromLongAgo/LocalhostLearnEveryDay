@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>无标题文档</title>
+    <style type="text/css">
+        <!--
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        #imgslide {
+            margin: 100px auto;
+            width: 550px;
+            position: relative;
+            -moz-user-select: none
+        }
+
+        #imgslide img {
+            width: 550px
+        }
+
+        #imgslide #pre {
+            position: absolute;
+            display: block;
+            height: 100%;
+            background: #003366;
+            filter: Alpha(Opacity=0);
+            opacity: 0;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 50%;
+            cursor: url(http://s.xnimg.cn/imgpro/arrow/pre.cur), auto;
+        }
+
+        #imgslide #next {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            background: #00CC99;
+            filter: Alpha(Opacity=0);
+            opacity: 0;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            right: 0;
+            cursor: url(http://s.xnimg.cn/imgpro/arrow/next.cur), auto;
+        }
+
+        #intro {
+            padding: 5px 8px;
+            line-height: 1.6;
+            font-size: 12px;
+            color: #333;
+            background: #333333;
+            color: #fff
+        }
+
+        -->
+    </style>
+</head>
+<body>
+<div id="imgslide">
+    <span id="pre"></span>
+    <span id="next"></span>
+    <img id="showimg" src="../img/21-161122135G1O2.gif"/>
+    <div id="intro"></div>
+</div>
+<script type="text/javascript">
+    $ = function (obj) {
+        return document.getElementById(obj);
+    }
+    //图片地址
+    var imgsrc = new Array();
+    imgsrc[0] = "../img/21-161122135GK06.gif";
+    imgsrc[1] = "../img/21-161122135G1O2.gif";
+    imgsrc[2] = "../img/21-16112213564S26.gif";
+    imgsrc[3] = "../img/21-161122135630O1.gif";
+    imgsrc[4] = "../img/21-161122135GK06.gif";
+    imgsrc[5] = "../img/21-161122135GK06.gif";
+    imgsrc[6] = "../img/21-161122135G1O2.gif";
+    imgsrc[7] = "../img/21-16112213564S26.gif";
+    imgsrc[8] = "../img/21-161122135630O1.gif";
+    //图片预加载
+    var arr = new Array();
+    for (var i = 1; i <= imgsrc.length; i++) {
+        arr[i] = new Image();
+        arr[i].src = imgsrc[i];
+        arr[i].onload;
+    }
+    //图片文字简介
+    var title = new Array();
+    title[0] = "1双胞胎足球宝贝雨蔷、雨薇上演超级模仿秀，再现本届世界杯上的一些经典片段。";
+    title[1] = "2高清：荷兰美女长发飘散 热情冷艳";
+    title[2] = "3图片文字介绍3";
+    title[3] = "4图片文字介绍444444444";
+    title[4] = "4图片文字介绍55555555555";
+    title[5] = "4图片文字介绍666666666666";
+    title[6] = "4图片文字介绍77777777777777";
+    title[7] = "4图片文字介绍88888888888";
+    title[8] = "4图片文字介绍999999999999";
+
+    $("intro").innerHTML = title[0]
+
+    i = 0;
+
+    $("next").onclick = function () {
+        i++;
+        if (i >= imgsrc.length) {
+            i = 0
+        }
+        $("showimg").setAttribute("src", imgsrc[i]);
+        $("intro").innerHTML = title[i]
+    }
+    $("pre").onclick = function () {
+        i--;
+        if (i < 0) {
+            i = imgsrc.length - 1
+        }
+        $("showimg").setAttribute("src", imgsrc[i]);
+        $("intro").innerHTML = title[i]
+    }
+</script>
+</body>
+</html> 

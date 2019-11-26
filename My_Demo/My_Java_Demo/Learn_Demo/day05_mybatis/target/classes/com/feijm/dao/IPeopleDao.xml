@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <mapper namespace="com.feijm.dao.IPeopleDao">
+
+    <!--配置查询所有-->
+    <select id="findAllDao" resultType="com.feijm.domain.People">
+        select * from mybatisdemo
+    </select>
+</mapper>
